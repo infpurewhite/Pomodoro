@@ -275,8 +275,10 @@
     return range.start === range.end ? ui('days.single', range) : ui('days.range', range);
   }
 
+  /** "5 days", joined by a non-breaking space so the number never ends a line alone. */
   function dayCount(n) {
-    return n === 1 ? ui('unit.day.one') : ui('unit.day.other', { n: n });
+    var text = n === 1 ? ui('unit.day.one') : ui('unit.day.other', { n: n });
+    return text.replace(/ /g, '\u00a0');
   }
 
   function formatDate(iso) {
