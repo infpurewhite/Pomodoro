@@ -12,6 +12,7 @@ Una página web bilingüe (español / inglés) que explica el ciclo menstrual fa
 - **Cycle wheel and hormone chart.** A ring of the four phases with a marker for today, and an illustrative chart of relative oestrogen and progesterone levels with a hover and keyboard read-out and a table alternative.
 - **Day explorer.** A slider and play button under the chart step through the cycle day by day, showing the phase, its illustration and the hormone trend (low, rising, high, steady or falling).
 - **Phase illustrations.** Inline SVG pictures for each phase (drop, sprout, egg, moon) in the wheel, the phase cards and the phase menu; clicking a wheel segment or legend entry jumps to that phase.
+- **Your phase first.** Once dates are entered, the phases section shows only the reader's current phase; the other three appear as cards that open their full guidance in a window (`<dialog>`). Before dates are entered, all four phases are shown on the page.
 - **Four phase guides.** Menstrual, follicular, around ovulation and luteal (with the premenstrual week flagged). Each has what is happening, how you may feel, and nutrition, exercise and productivity advice.
 - **Evidence labels.** Strong, moderate or limited, shown as dots and words. A "short version" section states what research does and does not support.
 - **Safety content.** When the guide does not apply, when to see a health professional, and what to do in a crisis.
