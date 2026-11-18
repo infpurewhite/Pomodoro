@@ -177,6 +177,14 @@
     'level.rising': t('rising', 'subiendo'),
     'level.high': t('high', 'nivel alto'),
     'level.steady': t('steady', 'estable'),
+    'explore.title': t('Explore a day', 'Explora un día'),
+    'explore.hint': t(
+      'Drag the slider, or press play to watch the cycle unfold.',
+      'Mueve el control o pulsa reproducir para ver cómo avanza el ciclo.'
+    ),
+    'explore.slider': t('Cycle day to explore', 'Día del ciclo para explorar'),
+    'explore.play': t('Play', 'Reproducir'),
+    'explore.pause': t('Pause', 'Pausa'),
     'level.falling': t('falling', 'bajando'),
 
     'evidence.title': t('The short version', 'La versión corta'),
@@ -875,6 +883,7 @@
 
   var fit = [
     {
+      icon: 'pill',
       title: t('Hormonal contraception', 'Anticonceptivos hormonales'),
       text: t(
         'Methods such as the combined pill, the patch and the injection work by stopping ovulation, so the hormone pattern described here does not apply. Tracking how you feel is still useful.',
@@ -883,6 +892,7 @@
       sources: ['nhsPeriods']
     },
     {
+      icon: 'irregular',
       title: t('Irregular cycles', 'Ciclos irregulares'),
       text: t(
         'Periods count as irregular when the gap between them is less than 21 days or more than 35 days. Date-based estimates will not work well. A doctor can check for causes such as polycystic ovary syndrome (PCOS, now also called PMOS) or a thyroid problem.',
@@ -891,6 +901,7 @@
       sources: ['nhsIrregular']
     },
     {
+      icon: 'life',
       title: t('Puberty and the approach of menopause', 'Pubertad y cercanía de la menopausia'),
       text: t(
         'Irregular periods are common at both ends of the reproductive years, so phase estimates are less dependable then.',
@@ -899,6 +910,7 @@
       sources: ['nhsIrregular']
     },
     {
+      icon: 'mood',
       title: t('Pregnancy and after menopause', 'Embarazo y después de la menopausia'),
       text: t(
         'There is no menstrual cycle to follow, so this guide does not apply.',

@@ -10,6 +10,8 @@ Una página web bilingüe (español / inglés) que explica el ciclo menstrual fa
 
 - **Phase calculator.** The reader enters the first day of their last period, cycle length (21–35 days) and days of bleeding (2–8). The page estimates the current cycle day and phase, the next period date, and shows short advice for today.
 - **Cycle wheel and hormone chart.** A ring of the four phases with a marker for today, and an illustrative chart of relative oestrogen and progesterone levels with a hover and keyboard read-out and a table alternative.
+- **Day explorer.** A slider and play button under the chart step through the cycle day by day, showing the phase, its illustration and the hormone trend (low, rising, high, steady or falling).
+- **Phase illustrations.** Inline SVG pictures for each phase (drop, sprout, egg, moon) in the wheel, the phase cards and the phase menu; clicking a wheel segment or legend entry jumps to that phase.
 - **Four phase guides.** Menstrual, follicular, around ovulation and luteal (with the premenstrual week flagged). Each has what is happening, how you may feel, and nutrition, exercise and productivity advice.
 - **Evidence labels.** Strong, moderate or limited, shown as dots and words. A "short version" section states what research does and does not support.
 - **Safety content.** When the guide does not apply, when to see a health professional, and what to do in a crisis.
