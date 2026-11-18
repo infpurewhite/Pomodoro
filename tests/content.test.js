@@ -163,7 +163,7 @@ test('every interface string referenced by app.js exists', () => {
   const dynamic = {
     'cat.': ['mood', 'nutrition', 'exercise', 'productivity'],
     'chart.': ['oestrogen', 'progesterone'],
-    'level.': ['low', 'rising', 'high', 'falling'],
+    'level.': ['low', 'rising', 'high', 'steady', 'falling'],
     'sources.': ['guidance', 'review', 'study'],
     'err.': ['date-required', 'date-invalid', 'date-future', 'cycle-range', 'period-range']
   };

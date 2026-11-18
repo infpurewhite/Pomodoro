@@ -213,3 +213,37 @@ test('describeHormone turns the curves into words', () => {
   assert.equal(Cycle.describeHormone('progesterone', 21, 28), 'high');
   assert.equal(Cycle.describeHormone('progesterone', 25, 28), 'falling');
 });
+
+test('oestrogen follows the textbook shape across a 28-day cycle', () => {
+  const words = (from, to) =>
+    Array.from({ length: to - from + 1 }, (_, i) => Cycle.describeHormone('oestrogen', from + i, 28));
+  // Low through the period and early follicular days, then a steep rise to the peak.
+  assert.deepEqual(new Set(words(1, 7)), new Set(['low']));
+  assert.deepEqual(new Set(words(8, 12)), new Set(['rising']));
+  assert.equal(Cycle.describeHormone('oestrogen', 13, 28), 'high');
+  // Dips after ovulation and levels off before the mid-luteal rise.
+  assert.deepEqual(new Set(words(14, 16)), new Set(['falling']));
+  assert.equal(Cycle.describeHormone('oestrogen', 17, 28), 'steady');
+  // Second, smaller peak in the middle of the luteal phase, then a fall.
+  assert.equal(Cycle.describeHormone('oestrogen', 21, 28), 'high');
+  const at = (day) => Cycle.hormoneLevels(day, 28).oestrogen;
+  assert.ok(at(21) < at(13), 'the luteal peak is smaller than the pre-ovulatory peak');
+  assert.ok(at(21) > at(17), 'oestrogen rises again after the post-ovulatory dip');
+  assert.deepEqual(new Set(words(22, 26)), new Set(['falling']));
+});
+
+test('a flat stretch is never reported as rising or falling', () => {
+  for (let length = Cycle.LIMITS.minCycle; length <= Cycle.LIMITS.maxCycle; length += 1) {
+    for (let day = 1; day <= length; day += 1) {
+      for (const hormone of ['oestrogen', 'progesterone']) {
+        const word = Cycle.describeHormone(hormone, day, length);
+        const slope =
+          Cycle.hormoneLevels(day + 0.5, length)[hormone] -
+          Cycle.hormoneLevels(day - 0.5, length)[hormone];
+        if (word === 'rising' || word === 'falling') {
+          assert.ok(Math.abs(slope) > 0.035, `day ${day} of ${length}: ${hormone} ${word}`);
+        }
+      }
+    }
+  }
+});
