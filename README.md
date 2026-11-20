@@ -68,16 +68,26 @@ This is a calendar estimate. Ovulation timing varies between people and between 
 - Every factual claim in `content.js` lists the ids of its sources; every recommendation has an evidence level.
 - **Strong**: consistent research findings, or guidelines built on them. **Moderate**: supported by reviews or health service advice, but effects are small, studies are low quality or results conflict. **Limited**: popular or plausible, with little direct research or no clear effect found.
 - Advice rated strong or moderate must cite a source. `npm test` fails if a source id is unknown, a source is never cited, a translation is missing, or the two languages use different placeholders.
-- The 26 sources are 13 reviews, meta-analyses and guidelines, 3 single studies and 10 NHS guidance pages. Journal sources carry DOIs.
-- **Game cards** use only findings the 26 sources already back; none adds a new source. On a card, the label rates the evidence behind the *answer*, not the claim, so a myth is not automatically "limited". Every card must cite at least one source.
+- The 30 sources are 16 reviews, meta-analyses and guidelines, 4 single studies and 10 NHS guidance pages. Journal sources carry DOIs.
+- **Who was studied.** Every study and review was carried out in women, except the WHO 2020 physical activity guideline, which covers all adults. Each entry in the source list says so (`sample` in `content.js`), and a test keeps the sources introduction true.
+- **Game cards** use only findings the page's sources already back; none adds a source of its own. On a card, the label rates the evidence behind the *answer*, not the claim, so a myth is not automatically "limited". Every card must cite at least one source.
 - **Infographics** are drawn from `content.js`: the figures are the numbers in the finding texts, and the evidence chart counts the labels on the page. A test checks that the chart's takeaway ("most phase tips are moderate or limited; no everyday basic is limited") still matches the labels.
+
+### Evidence update, November 2026
+
+The evidence was reviewed to prefer the most recent studies carried out in women:
+
+- **Added:** Niering et al. (2024) on maximal strength, Tsai et al. (2024) on exercise for period pain (replacing the 2019 Cochrane review), Jeon & Baek (2023) on sleep, Li et al. (2023, Apple Women's Health Study) on cycle variability, and Hurtová et al. (2026) on resting metabolism.
+- **Read in full:** Niering 2024, Colenso-Semple 2023, Tsai 2024, Romans 2012 and Pierson 2021. The others were checked against their abstracts and publisher records.
+- **Strength:** Niering et al. report a "medium effect" for isometric strength in the late follicular phase, but its 95% confidence interval crosses zero (SMD 0.60, −0.57 to 1.76; I² = 95%), and 15 of the 22 studies were rated low or very low quality. Only one comparison reached significance (isokinetic strength around ovulation, SMD 0.39, 0.01 to 0.76). The page therefore still says there is no clear effect of cycle phase on strength.
+- **Mood:** no review of mood across the cycle in women in general is newer than Romans et al. (2012), so it stays, with its counts (18 of 47 studies found no link with any phase; 7 linked low mood to the premenstrual phase alone).
 
 ### Limits to keep in mind
 
 - Bibliographic details and headline findings of each source were checked against publisher, PubMed and repository records in November 2026. Full texts were not all read, and NHS wording was checked through search results because the pages could not be fetched directly from the build environment. Re-check before relying on any single figure.
 - Guidance comes mostly from the UK National Health Service. Thresholds for seeking care can differ in other health systems.
 - The hormone chart is a schematic. Its curves are illustrative shapes, not data. The "Inside your body" diagram is too: follicle, egg, empty follicle and lining sizes follow the same model, and the empty follicle tracks the schematic progesterone curve. Its labels (follicle, lining building up and thickest after ovulation) rest on StatPearls and NHS physiology.
-- The PMDD figure (about 2 to 3 in 100) is now a headline graphic, so check it against Reilly et al. (2024) before publishing: their pooled estimate depends on how the diagnosis was confirmed.
+- The PMDD figure (about 2 to 3 in 100) comes from Reilly et al. (2024): 1.6% in community samples and 3.2% across all studies that confirmed the diagnosis with two cycles of daily symptom ratings. Studies without that check give about 7.7%.
 - The four-phase view is a simplification of a two-phase cycle, and it does not describe people using hormonal contraception or those with irregular cycles.
 - The content has not been reviewed by a clinician.
 

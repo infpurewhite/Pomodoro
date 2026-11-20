@@ -324,13 +324,15 @@
 
     'sources.title': t('Sources', 'Fuentes'),
     'sources.intro': t(
-      'Sources were last checked in November 2026. Research on the menstrual cycle is still thin in places; where studies disagree or are weak, this guide says so.',
-      'Las fuentes se revisaron por última vez en noviembre de 2026. La investigación sobre el ciclo menstrual todavía es escasa en algunos puntos; cuando los estudios no coinciden o son débiles, esta guía lo indica.'
+      'Sources were last checked in November 2026. Every study and review cited here was carried out in women, except the World Health Organization activity guideline, which covers all adults. Many studies did not confirm cycle phase with hormone tests, which is one reason much of the evidence is rated moderate or limited. Where studies disagree or are weak, this guide says so.',
+      'Las fuentes se revisaron por última vez en noviembre de 2026. Todos los estudios y revisiones citados aquí se hicieron con mujeres, salvo la guía de actividad física de la Organización Mundial de la Salud, que abarca a todas las personas adultas. Muchos estudios no confirmaron la fase del ciclo con análisis hormonales, y esa es una de las razones por las que gran parte de la evidencia es moderada o limitada. Cuando los estudios no coinciden o son débiles, esta guía lo indica.'
     ),
     'sources.cite': t('Source {n}', 'Fuente {n}'),
     'sources.guidance': t('Health service guidance', 'Guía de servicios de salud'),
     'sources.review': t('Review or guideline', 'Revisión o guía clínica'),
     'sources.study': t('Single study', 'Estudio individual'),
+    'sources.sample.women': t('Studied in women', 'Estudiado en mujeres'),
+    'sources.sample.adults': t('Studied in all adults', 'Estudiado en todas las personas adultas'),
 
     'footer.disclaimer': t(
       'This page offers general information and is not medical advice. It does not replace a consultation with a health professional.',
@@ -483,8 +485,8 @@
       },
       title: t('Mood: real, and very individual', 'Ánimo: real y muy individual'),
       text: t(
-        'In app records from more than 3 million women in 109 countries, most measures of mood varied more across the menstrual cycle than across the day, the week or the seasons. Yet a review of 47 studies using daily mood diaries found no clear evidence of one premenstrual mood pattern in women in general. A minority have symptoms severe enough to need treatment.',
-        'En registros de una aplicación con más de 3 millones de mujeres de 109 países, la mayoría de las medidas del ánimo variaron más a lo largo del ciclo menstrual que a lo largo del día, de la semana o de las estaciones. Sin embargo, una revisión de 47 estudios con diarios de ánimo no encontró evidencia clara de un único patrón premenstrual en las mujeres en general. Una minoría tiene síntomas lo bastante intensos como para necesitar tratamiento.'
+        'In app records from more than 3 million women in 109 countries, most measures of mood varied more across the menstrual cycle than across the day, the week or the seasons. Yet in a review of 47 studies using daily mood diaries, 18 found no link between mood and any phase, and only 7 linked low mood to the premenstrual phase alone. A minority have symptoms severe enough to need treatment.',
+        'En registros de una aplicación con más de 3 millones de mujeres de 109 países, la mayoría de las medidas del ánimo variaron más a lo largo del ciclo menstrual que a lo largo del día, de la semana o de las estaciones. Sin embargo, en una revisión de 47 estudios con diarios de ánimo, 18 no encontraron relación entre el ánimo y ninguna fase, y solo 7 relacionaron el ánimo bajo únicamente con la fase premenstrual. Una minoría tiene síntomas lo bastante intensos como para necesitar tratamiento.'
       ),
       sources: ['pierson2021', 'romans2012', 'reilly2024']
     },
@@ -496,8 +498,8 @@
         'Síntomas premenstruales intensos: reales y tratables'
       ),
       text: t(
-        'Roughly 2 to 3 people in every 100 have premenstrual mood symptoms severe enough to be diagnosed as premenstrual dysphoric disorder (PMDD). Treatments include certain antidepressants (SSRIs), some hormonal contraceptives and cognitive behavioural therapy.',
-        'Aproximadamente 2 o 3 de cada 100 personas tienen síntomas emocionales premenstruales tan intensos que se diagnostican como trastorno disfórico premenstrual (TDPM). Entre los tratamientos están ciertos antidepresivos (ISRS), algunos anticonceptivos hormonales y la terapia cognitivo-conductual.'
+        'Roughly 2 to 3 people in every 100 have premenstrual mood symptoms severe enough to be diagnosed as premenstrual dysphoric disorder (PMDD). That range comes from studies that confirmed the diagnosis with two cycles of daily symptom ratings: 1.6% in community samples and 3.2% across all such studies. Treatments include certain antidepressants (SSRIs), some hormonal contraceptives and cognitive behavioural therapy.',
+        'Aproximadamente 2 o 3 de cada 100 personas tienen síntomas emocionales premenstruales tan intensos que se diagnostican como trastorno disfórico premenstrual (TDPM). Ese rango proviene de estudios que confirmaron el diagnóstico con dos ciclos de registros diarios de síntomas: 1,6 % en muestras de la población general y 3,2 % en el conjunto de esos estudios. Entre los tratamientos están ciertos antidepresivos (ISRS), algunos anticonceptivos hormonales y la terapia cognitivo-conductual.'
       ),
       sources: ['reilly2024', 'nhsPmdd', 'acog2023'],
       stat: {
@@ -531,10 +533,10 @@
       },
       title: t('Exercise: train by how you feel', 'Ejercicio: entrena según cómo te sientas'),
       text: t(
-        'A meta-analysis of 78 studies found that performance may dip very slightly in the first days of the period. The evidence was low quality, and the authors concluded that no general rules can be set. A 2023 review of reviews found no clear effect of cycle phase on strength or on gains from training.',
-        'Un metaanálisis de 78 estudios encontró que el rendimiento puede bajar muy levemente en los primeros días del periodo. La evidencia era de baja calidad y los autores concluyeron que no se pueden fijar reglas generales. Una revisión de revisiones de 2023 no halló un efecto claro de la fase del ciclo sobre la fuerza ni sobre los progresos del entrenamiento.'
+        'A meta-analysis of 78 studies found that performance may dip very slightly in the first days of the period. The evidence was low quality, and the authors concluded that no general rules can be set. A 2023 review of reviews found no clear effect of cycle phase on strength or on gains from training, and a 2024 meta-analysis of 22 studies in 433 women found only small differences in maximal strength between phases, most of which could have been due to chance.',
+        'Un metaanálisis de 78 estudios encontró que el rendimiento puede bajar muy levemente en los primeros días del periodo. La evidencia era de baja calidad y los autores concluyeron que no se pueden fijar reglas generales. Una revisión de revisiones de 2023 no halló un efecto claro de la fase del ciclo sobre la fuerza ni sobre los progresos del entrenamiento, y un metaanálisis de 2024 con 22 estudios y 433 mujeres encontró solo pequeñas diferencias de fuerza máxima entre fases, la mayoría de las cuales podrían deberse al azar.'
       ),
-      sources: ['mcnulty2020', 'colenso2023']
+      sources: ['mcnulty2020', 'colenso2023', 'niering2024']
     },
     {
       id: 'appetite',
@@ -552,10 +554,10 @@
         'Apetito: un poco mayor antes del periodo'
       ),
       text: t(
-        'Pooled studies show people eat more in the second half of the cycle, by roughly 170 kcal a day on average, and resting metabolism may be slightly higher too. The studies are small and their methods are inconsistent.',
-        'Los estudios combinados muestran que se come más en la segunda mitad del ciclo, unas 170 kcal diarias más en promedio, y que el metabolismo en reposo también podría ser algo mayor. Son estudios pequeños y con métodos poco uniformes.'
+        'Pooled studies show people eat more in the second half of the cycle, by roughly 170 kcal a day on average. Resting metabolism may be slightly higher too: recent studies put the rise at about 30 to 120 kcal a day, small enough that it may fall within normal day-to-day variation. The studies are small and their methods are inconsistent.',
+        'Los estudios combinados muestran que se come más en la segunda mitad del ciclo, unas 170 kcal diarias más en promedio. El metabolismo en reposo también podría ser algo mayor: estudios recientes estiman el aumento en unas 30 a 120 kcal al día, tan poco que podría quedar dentro de la variación normal de un día a otro. Son estudios pequeños y con métodos poco uniformes.'
       ),
-      sources: ['tucker2025', 'benton2020']
+      sources: ['tucker2025', 'benton2020', 'hurtova2026']
     }
   ];
 
@@ -616,11 +618,11 @@
       exercise: [
         {
           text: t(
-            'Movement can ease cramps: try walking, swimming, cycling or yoga. A Cochrane review found that regular exercise may reduce period pain substantially, although the trials were small and low quality.',
-            'Moverte puede aliviar los cólicos: prueba caminar, nadar, andar en bicicleta o hacer yoga. Una revisión Cochrane encontró que el ejercicio regular puede reducir bastante el dolor menstrual, aunque los ensayos eran pequeños y de baja calidad.'
+            'Movement can ease cramps: try walking, swimming, cycling, yoga or relaxation exercises. A 2024 analysis of 29 randomised trials with 1,808 participants found that every type of exercise tested reduced period pain after 8 weeks, by about 3 to 4 points on a 10-point scale. Most trials had some risk of bias, and nearly all enrolled people aged 15 to 26.',
+            'Moverte puede aliviar los cólicos: prueba caminar, nadar, andar en bicicleta, hacer yoga o ejercicios de relajación. Un análisis de 2024 con 29 ensayos aleatorizados y 1808 participantes encontró que todos los tipos de ejercicio estudiados redujeron el dolor menstrual tras 8 semanas, en unos 3 a 4 puntos en una escala de 10. La mayoría de los ensayos tenía algún riesgo de sesgo, y casi todos incluían a personas de 15 a 26 años.'
           ),
           evidence: 'moderate',
-          sources: ['armour2019', 'nhsPain']
+          sources: ['tsai2024', 'nhsPain']
         },
         {
           text: t(
@@ -712,11 +714,11 @@
       exercise: [
         {
           text: t(
-            'You may read that this is the window for heavy lifting and intense sessions. A 2023 review of reviews found no clear effect of cycle phase on strength or on gains from training, so a consistent programme matters more than timing.',
-            'Quizá hayas leído que esta es la ventana ideal para levantar pesado y hacer sesiones intensas. Una revisión de revisiones de 2023 no halló un efecto claro de la fase del ciclo sobre la fuerza ni sobre los progresos del entrenamiento, así que importa más la constancia del programa que el momento.'
+            'You may read that this is the window for heavy lifting and intense sessions. A 2023 review of reviews found no clear effect of cycle phase on strength or on gains from training, and a 2024 meta-analysis of 22 studies found only small strength differences between phases, most of which could have been due to chance. A consistent programme matters more than timing.',
+            'Quizá hayas leído que esta es la ventana ideal para levantar pesado y hacer sesiones intensas. Una revisión de revisiones de 2023 no halló un efecto claro de la fase del ciclo sobre la fuerza ni sobre los progresos del entrenamiento, y un metaanálisis de 2024 con 22 estudios encontró solo pequeñas diferencias de fuerza entre fases, la mayoría de las cuales podrían deberse al azar. Importa más la constancia del programa que el momento.'
           ),
           evidence: 'moderate',
-          sources: ['colenso2023']
+          sources: ['colenso2023', 'niering2024']
         },
         {
           text: t(
@@ -880,7 +882,7 @@
             'Tener más hambre es fisiológico. Los estudios encuentran que en esta fase se comen unas 170 kcal más al día, y el metabolismo en reposo podría ser algo mayor. Planifica comidas regulares y saciantes en lugar de luchar contra el apetito.'
           ),
           evidence: 'moderate',
-          sources: ['tucker2025', 'benton2020']
+          sources: ['tucker2025', 'benton2020', 'hurtova2026']
         },
         {
           text: t(
@@ -906,17 +908,17 @@
             'La fuerza y el rendimiento no bajan de forma constante en esta fase. Si antes del periodo te sientes pesada o cansada, reduce la intensidad en lugar de dejar de entrenar.'
           ),
           evidence: 'moderate',
-          sources: ['colenso2023', 'mcnulty2020']
+          sources: ['colenso2023', 'mcnulty2020', 'niering2024']
         }
       ],
       productivity: [
         {
           text: t(
-            'Protect your sleep in the last week: keep a regular bedtime and wind down earlier. Poorer sleep before and during a period is common in people with premenstrual symptoms or painful cramps.',
-            'Cuida tu sueño en la última semana: mantén un horario regular y empieza a relajarte más temprano. Dormir peor antes y durante el periodo es frecuente en quienes tienen síntomas premenstruales o cólicos dolorosos.'
+            'Protect your sleep in the last week: keep a regular bedtime and wind down earlier. Poorer sleep before and during a period is common in people with premenstrual symptoms or painful cramps; a 2023 review of 35 studies linked both with shorter, less satisfying sleep and more daytime sleepiness.',
+            'Cuida tu sueño en la última semana: mantén un horario regular y empieza a relajarte más temprano. Dormir peor antes y durante el periodo es frecuente en quienes tienen síntomas premenstruales o cólicos dolorosos; una revisión de 2023 con 35 estudios relacionó ambos con un sueño más corto y menos satisfactorio, y con más somnolencia durante el día.'
           ),
           evidence: 'moderate',
-          sources: ['baker2018', 'nhsPms']
+          sources: ['jeon2023', 'baker2018', 'nhsPms']
         },
         {
           text: t(
@@ -1007,7 +1009,7 @@
         'Dormir lo suficiente forma parte del consejo habitual para los síntomas premenstruales, y dormir peor en los días previos al periodo es frecuente en quienes los tienen.'
       ),
       evidence: 'moderate',
-      sources: ['nhsPms', 'baker2018']
+      sources: ['nhsPms', 'baker2018', 'jeon2023']
     },
     {
       icon: 'track',
@@ -1045,10 +1047,10 @@
     {
       title: t('Puberty and the approach of menopause', 'Pubertad y cercanía de la menopausia'),
       text: t(
-        'Irregular periods are common at both ends of the reproductive years, so phase estimates are less dependable then.',
-        'Los periodos irregulares son frecuentes al principio y al final de los años reproductivos, así que en esas etapas las estimaciones por fase son menos confiables.'
+        'Irregular periods are common at both ends of the reproductive years, so phase estimates are less dependable then. In a 2023 study of 12,608 people, cycle length varied most in those under 20 and over 45.',
+        'Los periodos irregulares son frecuentes al principio y al final de los años reproductivos, así que en esas etapas las estimaciones por fase son menos confiables. En un estudio de 2023 con 12 608 personas, la duración del ciclo varió más en las menores de 20 años y en las mayores de 45.'
       ),
-      sources: ['nhsIrregular']
+      sources: ['nhsIrregular', 'li2023']
     },
     {
       title: t('Pregnancy and after menopause', 'Embarazo y después de la menopausia'),
@@ -1194,11 +1196,11 @@
           'Solo deberías levantar pesado en tu fase folicular.'
         ),
         explanation: t(
-          'A 2023 review of reviews found no clear effect of cycle phase on strength or on gains from training. A consistent programme matters more than timing.',
-          'Una revisión de revisiones de 2023 no halló un efecto claro de la fase del ciclo sobre la fuerza ni sobre los progresos del entrenamiento. Importa más la constancia del programa que el momento.'
+          'A 2023 review of reviews found no clear effect of cycle phase on strength or on gains from training, and a 2024 meta-analysis of 22 studies found only small strength differences, most of which could have been due to chance. A consistent programme matters more than timing.',
+          'Una revisión de revisiones de 2023 no halló un efecto claro de la fase del ciclo sobre la fuerza ni sobre los progresos del entrenamiento, y un metaanálisis de 2024 con 22 estudios encontró solo pequeñas diferencias de fuerza, la mayoría de las cuales podrían deberse al azar. Importa más la constancia del programa que el momento.'
         ),
         evidence: 'moderate',
-        sources: ['colenso2023']
+        sources: ['colenso2023', 'niering2024']
       },
       {
         id: 'thinking-drops',
@@ -1279,7 +1281,7 @@
           'Tener más hambre es fisiológico. Los estudios combinados encuentran que en la segunda mitad del ciclo se comen unas 170 kcal más al día, y el metabolismo en reposo podría ser algo mayor. Planifica comidas regulares y saciantes.'
         ),
         evidence: 'moderate',
-        sources: ['tucker2025', 'benton2020']
+        sources: ['tucker2025', 'benton2020', 'hurtova2026']
       },
       {
         id: 'pain-normal',
@@ -1300,11 +1302,11 @@
         answer: 'fact',
         claim: t('Regular exercise can ease period pain.', 'El ejercicio regular puede aliviar el dolor menstrual.'),
         explanation: t(
-          'A Cochrane review found that regular exercise may reduce period pain substantially, although the trials were small and low quality. Walking, swimming, cycling and yoga are all worth trying.',
-          'Una revisión Cochrane encontró que el ejercicio regular puede reducir bastante el dolor menstrual, aunque los ensayos eran pequeños y de baja calidad. Vale la pena probar caminar, nadar, andar en bicicleta o hacer yoga.'
+          'A 2024 analysis of 29 randomised trials found that every type of exercise tested, from relaxation exercises to strength training and yoga, reduced period pain after 8 weeks. Most trials had some risk of bias.',
+          'Un análisis de 2024 con 29 ensayos aleatorizados encontró que todos los tipos de ejercicio estudiados, desde los ejercicios de relajación hasta el entrenamiento de fuerza y el yoga, redujeron el dolor menstrual tras 8 semanas. La mayoría de los ensayos tenía algún riesgo de sesgo.'
         ),
         evidence: 'moderate',
-        sources: ['armour2019', 'nhsPain']
+        sources: ['tsai2024', 'nhsPain']
       },
       {
         id: 'heavy-iron',
@@ -1388,7 +1390,7 @@
           'Dormir peor antes y durante el periodo es frecuente en quienes tienen síntomas premenstruales o cólicos dolorosos. Mantener un horario regular y empezar a relajarte más temprano puede ayudar.'
         ),
         evidence: 'moderate',
-        sources: ['baker2018', 'nhsPms']
+        sources: ['jeon2023', 'baker2018', 'nhsPms']
       },
       {
         id: 'bleeding-7-days',
@@ -1414,6 +1416,8 @@
   /**
    * `kind` is 'guidance' (health service page), 'review' (systematic review,
    * meta-analysis, narrative review or clinical guideline) or 'study' (single study).
+   * `sample` says who was studied: 'women' (female participants only) or 'adults'
+   * (all adults). Health service pages and the physiology reference have none.
    * Citations stay in their original language.
    */
   var sources = [
@@ -1437,24 +1441,28 @@
     },
     {
       id: 'bull2019',
+      sample: 'women',
       kind: 'study',
       cite: 'Bull et al. (2019). Real-world menstrual cycle characteristics of more than 600,000 menstrual cycles. npj Digital Medicine, 2, 83.',
       doi: '10.1038/s41746-019-0152-7'
     },
     {
       id: 'pierson2021',
+      sample: 'women',
       kind: 'study',
       cite: "Pierson et al. (2021). Daily, weekly, seasonal and menstrual cycles in women's mood, behaviour and vital signs. Nature Human Behaviour, 5, 716–725.",
       doi: '10.1038/s41562-020-01046-9'
     },
     {
       id: 'romans2012',
+      sample: 'women',
       kind: 'review',
       cite: 'Romans et al. (2012). Mood and the menstrual cycle: a review of prospective data studies. Gender Medicine, 9(5), 361–384.',
       doi: '10.1016/j.genm.2012.07.003'
     },
     {
       id: 'reilly2024',
+      sample: 'women',
       kind: 'review',
       cite: 'Reilly et al. (2024). The prevalence of premenstrual dysphoric disorder: systematic review and meta-analysis. Journal of Affective Disorders, 349, 534–540.',
       doi: '10.1016/j.jad.2024.01.066'
@@ -1473,48 +1481,63 @@
     },
     {
       id: 'acog2023',
+      sample: 'women',
       kind: 'review',
       cite: 'American College of Obstetricians and Gynecologists (2023). Management of premenstrual disorders: ACOG Clinical Practice Guideline No. 7. Obstetrics & Gynecology, 142(6), 1516–1533.',
       doi: '10.1097/AOG.0000000000005426'
     },
     {
       id: 'mcnulty2020',
+      sample: 'women',
       kind: 'review',
       cite: 'McNulty et al. (2020). The effects of menstrual cycle phase on exercise performance in eumenorrheic women: a systematic review and meta-analysis. Sports Medicine, 50(10), 1813–1827.',
       doi: '10.1007/s40279-020-01319-3'
     },
     {
       id: 'colenso2023',
+      sample: 'women',
       kind: 'review',
       cite: "Colenso-Semple et al. (2023). Current evidence shows no influence of women's menstrual cycle phase on acute strength performance or adaptations to resistance exercise training. Frontiers in Sports and Active Living, 5, 1054542.",
       doi: '10.3389/fspor.2023.1054542'
     },
     {
-      id: 'armour2019',
+      id: 'niering2024',
+      sample: 'women',
       kind: 'review',
-      cite: 'Armour et al. (2019). Exercise for dysmenorrhoea. Cochrane Database of Systematic Reviews, Issue 9, CD004142.',
-      doi: '10.1002/14651858.CD004142.pub4'
+      cite: 'Niering et al. (2024). The influence of menstrual cycle phases on maximal strength performance in healthy female adults: a systematic review with meta-analysis. Sports, 12(1), 31.',
+      doi: '10.3390/sports12010031'
+    },
+    {
+      id: 'tsai2024',
+      sample: 'women',
+      kind: 'review',
+      cite: 'Tsai et al. (2024). Comparative effectiveness of different exercises for reducing pain intensity in primary dysmenorrhea: a systematic review and network meta-analysis of randomized controlled trials. Sports Medicine - Open, 10, 63.',
+      doi: '10.1186/s40798-024-00718-4'
     },
     {
       id: 'who2020',
+      sample: 'adults',
       kind: 'review',
       cite: 'Bull et al. (2020). World Health Organization 2020 guidelines on physical activity and sedentary behaviour. British Journal of Sports Medicine, 54(24), 1451–1462.',
       doi: '10.1136/bjsports-2020-102955'
     },
     {
       id: 'tucker2025',
+      sample: 'women',
       kind: 'review',
       cite: 'Tucker et al. (2025). The effect of the menstrual cycle on energy intake: a systematic review and meta-analysis. Nutrition Reviews, 83(3), e866.',
       doi: '10.1093/nutrit/nuae093'
     },
     {
       id: 'benton2020',
+      sample: 'women',
       kind: 'review',
       cite: 'Benton et al. (2020). Effect of menstrual cycle on resting metabolism: a systematic review and meta-analysis. PLOS ONE, 15(7), e0236025.',
       doi: '10.1371/journal.pone.0236025'
     },
     {
       id: 'munro2023',
+      sample: 'women',
       kind: 'review',
       cite: 'Munro et al. (2023). The relationship between heavy menstrual bleeding, iron deficiency, and iron deficiency anemia. American Journal of Obstetrics and Gynecology, 229(1), 1–9.',
       doi: '10.1016/j.ajog.2023.01.017'
@@ -1527,21 +1550,45 @@
     },
     {
       id: 'jang2025',
+      sample: 'women',
       kind: 'review',
       cite: 'Jang et al. (2025). Menstrual cycle effects on cognitive performance: a meta-analysis. PLOS ONE, 20(3), e0318576.',
       doi: '10.1371/journal.pone.0318576'
     },
     {
       id: 'schoep2019',
+      sample: 'women',
       kind: 'study',
       cite: 'Schoep et al. (2019). Productivity loss due to menstruation-related symptoms: a nationwide cross-sectional survey among 32 748 women. BMJ Open, 9(6), e026186.',
       doi: '10.1136/bmjopen-2018-026186'
     },
     {
       id: 'baker2018',
+      sample: 'women',
       kind: 'review',
       cite: 'Baker & Lee (2018). Menstrual cycle effects on sleep. Sleep Medicine Clinics, 13(3), 283–294.',
       doi: '10.1016/j.jsmc.2018.04.002'
+    },
+    {
+      id: 'jeon2023',
+      sample: 'women',
+      kind: 'review',
+      cite: "Jeon & Baek (2023). Menstrual disturbances and its association with sleep disturbances: a systematic review. BMC Women's Health, 23, 470.",
+      doi: '10.1186/s12905-023-02629-0'
+    },
+    {
+      id: 'li2023',
+      sample: 'women',
+      kind: 'study',
+      cite: "Li et al. (2023). Menstrual cycle length variation by demographic characteristics from the Apple Women's Health Study. npj Digital Medicine, 6, 100.",
+      doi: '10.1038/s41746-023-00848-1'
+    },
+    {
+      id: 'hurtova2026',
+      sample: 'women',
+      kind: 'review',
+      cite: 'Hurtová, Gimunová & Beníčková (2026). Resting metabolic rate fluctuations across the menstrual cycle: a systematic review. Frontiers in Physiology, 17, 1778735.',
+      doi: '10.3389/fphys.2026.1778735'
     },
     {
       id: 'nhsHeavy',

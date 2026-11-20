@@ -440,7 +440,16 @@
       var linkText = source.doi ? 'doi:' + source.doi : source.url.replace(/^https:\/\//, '');
       list.appendChild(
         el('li', { id: 'source-' + (index + 1) }, [
-          el('span', { class: 'source-kind', text: ui('sources.' + source.kind) }),
+          el('span', { class: 'source-kind' }, [
+            ui('sources.' + source.kind),
+            source.sample
+              ? el('span', {
+                  class: 'source-sample',
+                  'data-sample': source.sample,
+                  text: ui('sources.sample.' + source.sample)
+                })
+              : null
+          ]),
           source.cite + ' ',
           el('a', { class: 'source-link', href: href, rel: 'noopener noreferrer', text: linkText })
         ])

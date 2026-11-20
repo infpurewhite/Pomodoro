@@ -174,6 +174,7 @@ test('every interface string referenced by the scripts exists', () => {
     'quiz.verdict.': Quiz.ANSWERS,
     'quiz.said.': Quiz.ANSWERS,
     'quiz.result.': ['high', 'mid', 'low'],
+    'sources.sample.': ['women', 'adults'],
     'stat.unit.': ['country', 'person', 'study']
   };
   for (const prefix of prefixes) {
@@ -254,4 +255,19 @@ test('the evidence chart takeaway matches the labels on the page', () => {
     'most phase-specific tips are rated moderate or limited'
   );
   assert.equal(basics.limited || 0, 0, 'none of the everyday basics is rated limited');
+});
+
+test('every study and review says who was studied, and only the WHO guideline covers all adults', () => {
+  for (const source of C.sources) {
+    if (source.kind === 'guidance' || source.id === 'statpearls') {
+      assert.equal(source.sample, undefined, `${source.id} carries no sample label`);
+    } else {
+      assert.ok(['women', 'adults'].includes(source.sample), `${source.id} says who was studied`);
+    }
+  }
+  // The sources introduction states this, so keep it true.
+  assert.deepEqual(
+    C.sources.filter((source) => source.sample === 'adults').map((source) => source.id),
+    ['who2020']
+  );
 });

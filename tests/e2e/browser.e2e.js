@@ -129,7 +129,7 @@ test('interactive page', { skip: chromium ? false : 'Playwright is not installed
     for (const href of new Set(targets)) {
       assert.ok(await page.$(href), `${href} exists`);
     }
-    assert.equal(await page.$$eval('#source-list li', (items) => items.length), 26);
+    assert.equal(await page.$$eval('#source-list li', (items) => items.length), 30);
   });
 
   await t.test('entered dates select today and offer a way back to it', async () => {

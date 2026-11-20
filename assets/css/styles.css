@@ -2781,6 +2781,19 @@ thead th {
   color: var(--ink-3);
 }
 
+.source-sample {
+  display: inline-block;
+  margin-left: 0.5rem;
+  padding: 0 0.45rem;
+  border: 1px solid var(--line-strong);
+  border-radius: 999px;
+  color: var(--ink-2);
+}
+
+.source-sample[data-sample="adults"] {
+  border-style: dashed;
+}
+
 .source-link {
   overflow-wrap: anywhere;
 }
