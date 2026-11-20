@@ -2,9 +2,10 @@
   "name": "in-phase",
   "version": "1.0.0",
   "private": true,
-  "description": "Bilingual (English/Spanish) evidence-labelled guide to the menstrual cycle: mood, nutrition, exercise and productivity by phase.",
+  "description": "Bilingual (English/Spanish) evidence-labelled guide to the menstrual cycle: a cycle explorer, a myth-or-fact game and advice on mood, nutrition, exercise and productivity by phase.",
   "scripts": {
     "test": "node --test",
+    "test:e2e": "node --test tests/e2e/browser.e2e.js",
     "serve": "python3 -m http.server 8000"
   },
   "engines": {

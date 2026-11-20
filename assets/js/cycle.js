@@ -36,6 +36,10 @@
   /** Length of the premenstrual window at the end of the luteal phase. */
   var PREMENSTRUAL_DAYS = 7;
 
+  /** Schematic progesterone curve: resting level and rise to its peak (no units). */
+  var PROGESTERONE_BASE = 0.05;
+  var PROGESTERONE_RISE = 0.86;
+
   var MS_PER_DAY = 86400000;
   var ISO_DATE = /^(\d{4})-(\d{2})-(\d{2})$/;
 
@@ -283,7 +287,77 @@
     return {
       oestrogen:
         0.12 + 0.74 * gaussian(day, ovulation - 1, 2.4) + 0.36 * gaussian(day, lutealPeak, 3.4),
-      progesterone: 0.05 + 0.86 * gaussian(day, lutealPeak, 3.2)
+      progesterone: PROGESTERONE_BASE + PROGESTERONE_RISE * gaussian(day, lutealPeak, 3.2)
+    };
+  }
+
+  function smoothstep(t) {
+    var x = Math.max(0, Math.min(1, t));
+    return x * x * (3 - 2 * x);
+  }
+
+  /**
+   * Schematic state of the ovary and the womb lining on a cycle day, for the
+   * "Inside your body" diagram. Like the hormone curves, these are illustrative
+   * shapes from 0 to 1 with no units, not measurements.
+   *
+   *   follicle      size of the maturing follicle; 0 once the egg has been released;
+   *   egg           0 while the egg is inside the follicle, 0.5 on the estimated ovulation
+   *                 day and 1 the day after, as it moves away; 0 again after that;
+   *   corpusLuteum  size of the empty follicle that makes progesterone; it follows the
+   *                 schematic progesterone curve, so it shrinks before the next period;
+   *   lining        thickness of the womb lining: thinnest as bleeding ends, thickest in
+   *                 the second half of the cycle;
+   *   shedding      true on the bleeding days shown in the menstrual segment.
+   *
+   * @param {number} day Cycle day, a whole number from 1 to `cycleLength`.
+   * @param {number} cycleLength
+   * @param {number} periodLength
+   * @returns {{follicle: number, egg: number, corpusLuteum: number, lining: number, shedding: boolean}}
+   * @throws {RangeError} When `day` is outside the cycle.
+   */
+  function anatomyForDay(day, cycleLength, periodLength) {
+    if (!isWholeNumber(day) || day < 1 || day > cycleLength) {
+      throw new RangeError('Cycle day ' + day + ' is outside 1..' + cycleLength);
+    }
+    var ovulation = estimateOvulationDay(cycleLength);
+    var bleedingEnd = getPhaseSegments(cycleLength, periodLength)[0].end;
+
+    var follicle = 0;
+    if (day < ovulation) {
+      follicle = 0.2 + 0.8 * smoothstep((day - 1) / (ovulation - 1));
+    } else if (day === ovulation) {
+      follicle = 1;
+    }
+
+    var egg = 0;
+    if (day === ovulation) {
+      egg = 0.5;
+    } else if (day === ovulation + OVULATION_WINDOW) {
+      egg = 1;
+    }
+
+    var corpusLuteum = 0;
+    if (day > ovulation) {
+      var progesterone = hormoneLevels(day, cycleLength).progesterone;
+      corpusLuteum = Math.max(0, Math.min(1, (progesterone - PROGESTERONE_BASE) / PROGESTERONE_RISE));
+    }
+
+    var lining;
+    if (day <= bleedingEnd) {
+      lining = 0.8 - (0.6 * (day - 1)) / Math.max(1, bleedingEnd - 1);
+    } else if (day <= ovulation) {
+      lining = 0.2 + (0.5 * (day - bleedingEnd)) / Math.max(1, ovulation - bleedingEnd);
+    } else {
+      lining = 0.7 + 0.3 * Math.min(1, (day - ovulation) / (LUTEAL_DAYS / 2));
+    }
+
+    return {
+      follicle: follicle,
+      egg: egg,
+      corpusLuteum: corpusLuteum,
+      lining: lining,
+      shedding: day <= bleedingEnd
     };
   }
 
@@ -327,6 +401,7 @@
     getPhaseForDay: getPhaseForDay,
     getCycleStatus: getCycleStatus,
     hormoneLevels: hormoneLevels,
-    describeHormone: describeHormone
+    describeHormone: describeHormone,
+    anatomyForDay: anatomyForDay
   };
 });

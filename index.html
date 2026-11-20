@@ -13,7 +13,7 @@
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data:; base-uri 'self'; form-action 'none'">
   <meta property="og:type" content="website">
   <meta property="og:title" content="In Phase · Understand your cycle, phase by phase">
-  <meta property="og:description" content="An evidence-labelled guide to mood, nutrition, exercise and productivity across the menstrual cycle. English and Spanish.">
+  <meta property="og:description" content="An evidence-labelled guide to mood, nutrition, exercise and productivity across the menstrual cycle, with a cycle explorer and a myth-or-fact game. English and Spanish.">
   <link rel="alternate" hreflang="en" href="?lang=en">
   <link rel="alternate" hreflang="es" href="?lang=es">
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
@@ -36,6 +36,7 @@
       <nav class="site-nav" aria-label="Sections" data-i18n-attr="aria-label:nav.label">
         <a href="#tool" data-i18n="nav.today">Your cycle today</a>
         <a href="#hormones" data-i18n="nav.hormones">Hormones</a>
+        <a href="#quiz" data-i18n="nav.quiz">Myth or fact?</a>
         <a href="#phases" data-i18n="nav.phases">Phases</a>
         <a href="#help" data-i18n="nav.help">When to get help</a>
         <a href="#sources" data-i18n="nav.sources">Sources</a>
@@ -54,6 +55,10 @@
           <p class="eyebrow" data-i18n="hero.eyebrow">A plain-language guide with evidence labels</p>
           <h1 id="hero-title" data-i18n="hero.title">Understand your cycle, phase by phase</h1>
           <p class="lead" data-i18n="hero.lead">What your hormones are doing, how that can affect your mood and energy, and what is worth trying for food, movement and work in each phase. Every recommendation says how strong the research behind it is.</p>
+          <a class="game-cta" href="#quiz">
+            <span class="game-cta-cards" aria-hidden="true"><span></span><span></span></span>
+            <span data-i18n="hero.ctaGame">Myth or fact? Take the 2-minute test</span>
+          </a>
 
           <form class="card tool" id="tool" novalidate aria-labelledby="tool-title">
             <h2 class="tool-title" id="tool-title" data-i18n="tool.title">Where are you today?</h2>
@@ -92,8 +97,25 @@
 
         <div class="hero-result">
           <div class="card result" id="result">
-            <p class="result-kicker" id="result-kicker"></p>
+            <div class="result-top">
+              <p class="result-kicker" id="result-kicker"></p>
+              <button type="button" class="btn-chip" id="back-today" hidden>
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="2.6"/></svg>
+                <span data-i18n="explore.backToday">Back to today</span>
+              </button>
+            </div>
             <div class="wheel" id="wheel"></div>
+            <div class="scrub">
+              <button type="button" class="step" id="day-prev" aria-label="Previous day" data-i18n-attr="aria-label:explore.prev">
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M14.5 6l-6 6 6 6"/></svg>
+              </button>
+              <label class="visually-hidden" for="day-slider" data-i18n="explore.slider">Explore the cycle, day by day</label>
+              <input type="range" class="day-slider" id="day-slider" min="1" max="28" step="1" value="1">
+              <button type="button" class="step" id="day-next" aria-label="Next day" data-i18n-attr="aria-label:explore.next">
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M9.5 6l6 6-6 6"/></svg>
+              </button>
+            </div>
+            <p class="scrub-hint" data-i18n="explore.hint">Drag the dot round the ring, tap a phase or use the slider.</p>
             <ul class="legend" id="wheel-legend"></ul>
             <div class="today" id="today-panel"></div>
             <p class="note" id="tool-note"></p>
@@ -109,15 +131,57 @@
           <h2 id="hormones-title" data-i18n="hormones.title">What your hormones are doing</h2>
           <div class="prose" id="hormones-prose"></div>
         </div>
-        <figure class="card chart-card">
-          <ul class="chart-legend" id="chart-legend"></ul>
-          <div class="chart" id="hormone-chart" tabindex="0" role="img"></div>
-          <figcaption data-i18n="chart.caption">Illustrative sketch of relative hormone levels. It is not to scale and is not a measurement of your own hormones.</figcaption>
-          <details class="chart-table">
-            <summary data-i18n="chart.tableSummary">Show this chart as a table</summary>
-            <div class="table-scroll" id="hormone-table"></div>
-          </details>
-        </figure>
+        <div class="panels">
+          <figure class="card body-card" id="body-card" aria-labelledby="body-title">
+            <div class="panel-head">
+              <h3 class="panel-title" id="body-title" data-i18n="body.title">Inside your body</h3>
+              <div class="panel-step">
+                <button type="button" class="step step-sm" id="body-prev" aria-label="Previous day" data-i18n-attr="aria-label:explore.prev">
+                  <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M14.5 6l-6 6 6 6"/></svg>
+                </button>
+                <p class="panel-day" id="body-day"></p>
+                <button type="button" class="step step-sm" id="body-next" aria-label="Next day" data-i18n-attr="aria-label:explore.next">
+                  <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M9.5 6l6 6-6 6"/></svg>
+                </button>
+              </div>
+            </div>
+            <div class="body-diagram" id="body-diagram"></div>
+            <dl class="body-labels">
+              <div class="body-label" data-part="ovary">
+                <dt data-i18n="body.ovary">Ovary</dt>
+                <dd id="body-ovary"></dd>
+              </div>
+              <div class="body-label" data-part="womb">
+                <dt data-i18n="body.womb">Womb lining</dt>
+                <dd id="body-womb"></dd>
+              </div>
+            </dl>
+            <figcaption id="body-caption"></figcaption>
+          </figure>
+
+          <figure class="card chart-card">
+            <ul class="chart-legend" id="chart-legend"></ul>
+            <div class="chart" id="hormone-chart" tabindex="0" role="img"></div>
+            <figcaption data-i18n="chart.caption">Illustrative sketch of relative hormone levels. It is not to scale and is not a measurement of your own hormones.</figcaption>
+            <details class="chart-table">
+              <summary data-i18n="chart.tableSummary">Show this chart as a table</summary>
+              <div class="table-scroll" id="hormone-table"></div>
+            </details>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-game" id="quiz" aria-labelledby="quiz-title">
+      <div class="container game-grid">
+        <div class="section-head game-head">
+          <p class="eyebrow" data-i18n="quiz.eyebrow">2-minute test</p>
+          <h2 id="quiz-title" data-i18n="quiz.title">Myth or fact?</h2>
+          <p class="section-intro" data-i18n="quiz.intro">Ten claims you may have seen online. Decide which ones hold up, then see what the research says.</p>
+          <p class="game-note" data-i18n="quiz.note">Every answer is based on the sources listed at the end of this page.</p>
+        </div>
+        <div class="game" id="game"></div>
+        <p class="visually-hidden" id="game-status" role="status" aria-live="polite"></p>
       </div>
     </section>
 
@@ -128,12 +192,15 @@
           <p class="section-intro" data-i18n="evidence.intro">Much online advice about “syncing” food, training and work with your cycle goes further than the research does. This is what studies support so far.</p>
         </div>
         <div class="findings" id="findings"></div>
-        <div class="key" aria-labelledby="key-title">
-          <div class="key-head">
-            <h3 id="key-title" data-i18n="key.title">How to read the labels</h3>
-            <p data-i18n="key.intro">Each recommendation below carries one of three labels.</p>
+        <div class="evidence-panel">
+          <figure class="card strength" id="strength"></figure>
+          <div class="key" aria-labelledby="key-title">
+            <div class="key-head">
+              <h3 id="key-title" data-i18n="key.title">How to read the labels</h3>
+              <p data-i18n="key.intro">Each recommendation below carries one of three labels.</p>
+            </div>
+            <dl class="key-list" id="evidence-key"></dl>
           </div>
-          <dl class="key-list" id="evidence-key"></dl>
         </div>
       </div>
     </section>
@@ -144,7 +211,7 @@
           <h2 id="phases-title" data-i18n="phases.title">The four phases</h2>
           <p class="section-intro" id="phases-intro"></p>
         </div>
-        <nav class="phase-nav" id="phase-nav" aria-label="Jump to a phase" data-i18n-attr="aria-label:phases.nav"></nav>
+        <div class="phase-tabs" id="phase-tabs" role="tablist" aria-label="Choose a phase" data-i18n-attr="aria-label:phases.nav"></div>
         <div class="phase-list" id="phase-list"></div>
       </div>
     </section>
@@ -214,7 +281,12 @@
   </noscript>
 
   <script src="assets/js/cycle.js" defer></script>
+  <script src="assets/js/quiz.js" defer></script>
   <script src="assets/js/content.js" defer></script>
+  <script src="assets/js/ui.js" defer></script>
+  <script src="assets/js/explorer.js" defer></script>
+  <script src="assets/js/game.js" defer></script>
+  <script src="assets/js/infographics.js" defer></script>
   <script src="assets/js/app.js" defer></script>
 </body>
 </html>

@@ -47,6 +47,7 @@
     'nav.label': t('Sections', 'Secciones'),
     'nav.today': t('Your cycle today', 'Tu ciclo hoy'),
     'nav.hormones': t('Hormones', 'Hormonas'),
+    'nav.quiz': t('Myth or fact?', '¿Mito o realidad?'),
     'nav.phases': t('Phases', 'Fases'),
     'nav.help': t('When to get help', 'Cuándo pedir ayuda'),
     'nav.sources': t('Sources', 'Fuentes'),
@@ -64,6 +65,7 @@
       'What your hormones are doing, how that can affect your mood and energy, and what is worth trying for food, movement and work in each phase. Every recommendation says how strong the research behind it is.',
       'Qué hacen tus hormonas, cómo pueden influir en tu ánimo y tu energía, y qué vale la pena probar en alimentación, movimiento y trabajo en cada fase. Cada recomendación indica qué tan sólida es la investigación que la respalda.'
     ),
+    'hero.ctaGame': t('Myth or fact? Take the 2-minute test', '¿Mito o realidad? Haz la prueba de 2 minutos'),
 
     'tool.title': t('Where are you today?', '¿En qué fase estás hoy?'),
     'tool.lastStart': t('First day of your last period', 'Primer día de tu último periodo'),
@@ -144,10 +146,31 @@
       'Un ciclo de {length} días representado como un anillo dividido en fases.'
     ),
     'wheel.ariaToday': t('Today is day {day}.', 'Hoy es el día {day}.'),
+    'wheel.ariaSelected': t('Day {day} is selected.', 'Está seleccionado el día {day}.'),
     'wheel.day': t('Day', 'Día'),
     'wheel.of': t('of {length}', 'de {length}'),
-    'wheel.exampleUnit': t('day cycle', 'días de ciclo'),
     'wheel.today': t('Today', 'Hoy'),
+
+    'explore.slider': t('Explore the cycle, day by day', 'Recorre el ciclo, día a día'),
+    'explore.hint': t(
+      'Drag the dot round the ring, tap a phase or use the slider.',
+      'Arrastra el punto por el anillo, toca una fase o usa el control deslizante.'
+    ),
+    'explore.prev': t('Previous day', 'Día anterior'),
+    'explore.next': t('Next day', 'Día siguiente'),
+    'explore.backToday': t('Back to today', 'Volver a hoy'),
+    'explore.valuetext': t('Day {day} of {length}: {phase}', 'Día {day} de {length}: {phase}'),
+    'explore.valuetextToday': t(
+      'Day {day} of {length}: {phase}, today',
+      'Día {day} de {length}: {phase}, hoy'
+    ),
+    'explore.dayTitle': t('What to expect on day {day}', 'Qué esperar el día {day}'),
+    'explore.expected': t('Expected around {date}.', 'Previsto alrededor del {date}.'),
+
+    'body.title': t('Inside your body', 'Dentro de tu cuerpo'),
+    'body.ovary': t('Ovary', 'Ovario'),
+    'body.womb': t('Womb lining', 'Revestimiento del útero'),
+    'body.day': t('Day {day} · {phase}', 'Día {day} · {phase}'),
     'legend.premenstrual': t('Premenstrual week', 'Semana premenstrual'),
     'days.range': t('Days {start}–{end}', 'Días {start}–{end}'),
     'days.single': t('Day {start}', 'Día {start}'),
@@ -162,8 +185,8 @@
       'Esquema ilustrativo de los niveles relativos de hormonas. No está a escala ni es una medición de tus propias hormonas.'
     ),
     'chart.aria': t(
-      'Line chart of relative oestrogen and progesterone levels across the cycle. Oestrogen peaks just before ovulation and progesterone peaks in the second half. Use the left and right arrow keys to move through the days.',
-      'Gráfico de líneas de los niveles relativos de estrógeno y progesterona a lo largo del ciclo. El estrógeno alcanza su máximo justo antes de la ovulación y la progesterona, en la segunda mitad. Usa las flechas izquierda y derecha para recorrer los días.'
+      'Line chart of relative oestrogen and progesterone levels across the cycle. Oestrogen peaks just before ovulation and progesterone peaks in the second half. Use the left and right arrow keys, or drag across the chart, to move through the days.',
+      'Gráfico de líneas de los niveles relativos de estrógeno y progesterona a lo largo del ciclo. El estrógeno alcanza su máximo justo antes de la ovulación y la progesterona, en la segunda mitad. Usa las flechas izquierda y derecha, o arrastra sobre el gráfico, para recorrer los días.'
     ),
     'chart.oestrogen': t('Oestrogen', 'Estrógeno'),
     'chart.progesterone': t('Progesterone', 'Progesterona'),
@@ -189,6 +212,80 @@
       'Cada recomendación de esta guía lleva una de estas tres etiquetas.'
     ),
 
+    'stat.unit.country': t('Each dot is one country', 'Cada punto es un país'),
+    'stat.unit.person': t('Each dot is one person in 100', 'Cada punto es una persona de cada 100'),
+    'stat.unit.study': t('Each square is one study', 'Cada cuadrado es un estudio'),
+    'stat.average': t('average', 'promedio'),
+
+    'strength.title': t(
+      'How strong is the advice on this page?',
+      '¿Qué tan sólidos son los consejos de esta página?'
+    ),
+    'strength.intro': t(
+      'Every tip in the four phases and in the everyday basics, counted by its evidence label. Each square is one tip.',
+      'Todos los consejos de las cuatro fases y de lo básico, contados según su etiqueta de evidencia. Cada cuadrado es un consejo.'
+    ),
+    'strength.basics': t('Everyday basics', 'Lo básico'),
+    'strength.tips': t('{n} tips', '{n} consejos'),
+    'strength.row': t(
+      '{name}: {strong} strong, {moderate} moderate and {limited} limited, out of {total} tips.',
+      '{name}: {strong} con evidencia sólida, {moderate} con evidencia moderada y {limited} con evidencia limitada, de {total} consejos.'
+    ),
+    'strength.takeaway': t(
+      'Most phase-specific tips are rated moderate or limited. None of the everyday basics is rated limited.',
+      'La mayoría de los consejos de cada fase tienen evidencia moderada o limitada. Ninguno de los consejos básicos tiene evidencia limitada.'
+    ),
+
+    'quiz.eyebrow': t('2-minute test', 'Prueba de 2 minutos'),
+    'quiz.title': t('Myth or fact?', '¿Mito o realidad?'),
+    'quiz.intro': t(
+      'Ten claims you may have seen online. Decide which ones hold up, then see what the research says.',
+      'Diez afirmaciones que quizá viste en internet. Decide cuáles se sostienen y luego mira qué dice la investigación.'
+    ),
+    'quiz.note': t(
+      'Every answer is based on the sources listed at the end of this page.',
+      'Cada respuesta se basa en las fuentes que aparecen al final de esta página.'
+    ),
+    'quiz.facts': t(
+      '10 cards · about 2 minutes · nothing is saved',
+      '10 tarjetas · unos 2 minutos · no se guarda nada'
+    ),
+    'quiz.start': t('Start the test', 'Empezar la prueba'),
+    'quiz.myth': t('Myth', 'Mito'),
+    'quiz.fact': t('Fact', 'Realidad'),
+    'quiz.hint': t(
+      'Swipe left for myth and right for fact, or use the buttons.',
+      'Desliza a la izquierda para mito y a la derecha para realidad, o usa los botones.'
+    ),
+    'quiz.claim': t('Claim {n} of {total}', 'Afirmación {n} de {total}'),
+    'quiz.score': t('{correct} correct', '{correct} correctas'),
+    'quiz.streak': t('{count} in a row', '{count} seguidas'),
+    'quiz.correct': t('Correct', 'Correcto'),
+    'quiz.incorrect': t('Not quite', 'No exactamente'),
+    'quiz.verdict.myth': t('This is a myth.', 'Es un mito.'),
+    'quiz.verdict.fact': t('This is a fact.', 'Es una realidad.'),
+    'quiz.said.myth': t('You said myth', 'Dijiste mito'),
+    'quiz.said.fact': t('You said fact', 'Dijiste realidad'),
+    'quiz.evidence': t('Evidence behind this answer', 'Evidencia detrás de esta respuesta'),
+    'quiz.next': t('Next claim', 'Siguiente afirmación'),
+    'quiz.finish': t('See my result', 'Ver mi resultado'),
+    'quiz.resultTitle': t('{correct} out of {total}', '{correct} de {total}'),
+    'quiz.result.high': t(
+      'Excellent. You can tell which claims the research supports.',
+      'Excelente. Sabes distinguir qué afirmaciones respalda la investigación.'
+    ),
+    'quiz.result.mid': t(
+      'Good. A few popular claims go further than the research does.',
+      'Bien. Algunas afirmaciones populares van más lejos que la investigación.'
+    ),
+    'quiz.result.low': t(
+      'Plenty of online advice sounds convincing. The recap shows what the research actually found.',
+      'Muchos consejos de internet suenan convincentes. El resumen muestra lo que encontró la investigación.'
+    ),
+    'quiz.bestStreak': t('Longest streak: {count}', 'Racha más larga: {count}'),
+    'quiz.recap': t('Recap', 'Resumen'),
+    'quiz.again': t('Play again with new cards', 'Jugar otra vez con otras tarjetas'),
+
     'phases.title': t('The four phases', 'Las cuatro fases'),
     'phases.introExample': t(
       'Day numbers are for a 28-day cycle. Enter your dates above to see your own.',
@@ -198,7 +295,7 @@
       'Day numbers are estimated from your {length}-day cycle.',
       'Los días se estiman a partir de tu ciclo de {length} días.'
     ),
-    'phases.nav': t('Jump to a phase', 'Ir a una fase'),
+    'phases.nav': t('Choose a phase', 'Elige una fase'),
     'phase.happening': t('What is happening', 'Qué está pasando'),
     'phase.feel': t('How you may feel', 'Cómo puedes sentirte'),
     'phase.here': t('You are here', 'Estás aquí'),
@@ -355,9 +452,35 @@
   /* "The short version": what research supports overall                 */
   /* ------------------------------------------------------------------ */
 
+  /**
+   * Each finding has a headline figure (`stat`) drawn as a small infographic.
+   * Visual kinds: 'range' (a number line), 'dots' (one dot per unit, `filled` and
+   * `partial` dots highlighted), 'squares' (one square per study) and 'plate'.
+   */
   var findings = [
     {
+      id: 'cycle',
+      icon: 'track',
+      title: t('Cycle length: a wide normal range', 'Duración del ciclo: un rango normal amplio'),
+      text: t(
+        'The average cycle is about 28 days, and anything from 21 to 35 days is normal. The first half is the part that varies most, between people and from month to month.',
+        'El ciclo promedio dura unos 28 días, y cualquier duración entre 21 y 35 días es normal. La primera mitad es la que más varía, entre personas y de un mes a otro.'
+      ),
+      sources: ['nhsFertility', 'statpearls', 'bull2019'],
+      stat: {
+        figure: t('21–35 days', '21–35 días'),
+        caption: t('is a normal cycle length', 'es una duración normal del ciclo'),
+        visual: { kind: 'range', min: 21, max: 35, mark: 28 }
+      }
+    },
+    {
+      id: 'mood',
       icon: 'mood',
+      stat: {
+        figure: t('3 million+', 'Más de 3 millones'),
+        caption: t('women in 109 countries', 'de mujeres en 109 países'),
+        visual: { kind: 'dots', count: 109, unit: 'country' }
+      },
       title: t('Mood: real, and very individual', 'Ánimo: real y muy individual'),
       text: t(
         'In app records from more than 3 million women in 109 countries, most measures of mood varied more across the menstrual cycle than across the day, the week or the seasons. Yet a review of 47 studies using daily mood diaries found no clear evidence of one premenstrual mood pattern in women in general. A minority have symptoms severe enough to need treatment.',
@@ -366,16 +489,31 @@
       sources: ['pierson2021', 'romans2012', 'reilly2024']
     },
     {
-      icon: 'exercise',
-      title: t('Exercise: train by how you feel', 'Ejercicio: entrena según cómo te sientas'),
-      text: t(
-        'A meta-analysis of 78 studies found that performance may dip very slightly in the first days of the period. The evidence was low quality, and the authors concluded that no general rules can be set. A 2023 review of reviews found no clear effect of cycle phase on strength or on gains from training.',
-        'Un metaanálisis de 78 estudios encontró que el rendimiento puede bajar muy levemente en los primeros días del periodo. La evidencia era de baja calidad y los autores concluyeron que no se pueden fijar reglas generales. Una revisión de revisiones de 2023 no halló un efecto claro de la fase del ciclo sobre la fuerza ni sobre los progresos del entrenamiento.'
+      id: 'pmdd',
+      icon: 'care',
+      title: t(
+        'Severe premenstrual symptoms: real and treatable',
+        'Síntomas premenstruales intensos: reales y tratables'
       ),
-      sources: ['mcnulty2020', 'colenso2023']
+      text: t(
+        'Roughly 2 to 3 people in every 100 have premenstrual mood symptoms severe enough to be diagnosed as premenstrual dysphoric disorder (PMDD). Treatments include certain antidepressants (SSRIs), some hormonal contraceptives and cognitive behavioural therapy.',
+        'Aproximadamente 2 o 3 de cada 100 personas tienen síntomas emocionales premenstruales tan intensos que se diagnostican como trastorno disfórico premenstrual (TDPM). Entre los tratamientos están ciertos antidepresivos (ISRS), algunos anticonceptivos hormonales y la terapia cognitivo-conductual.'
+      ),
+      sources: ['reilly2024', 'nhsPmdd', 'acog2023'],
+      stat: {
+        figure: t('2–3 in 100', '2–3 de cada 100'),
+        caption: t('people have PMDD', 'personas tienen TDPM'),
+        visual: { kind: 'dots', count: 100, filled: 2, partial: 1, unit: 'person' }
+      }
     },
     {
+      id: 'thinking',
       icon: 'productivity',
+      stat: {
+        figure: t('102 studies', '102 estudios'),
+        caption: t('and almost 4,000 participants', 'y casi 4000 participantes'),
+        visual: { kind: 'squares', count: 102, unit: 'study' }
+      },
       title: t('Thinking: no measurable change', 'Capacidad mental: sin cambios medibles'),
       text: t(
         'A 2025 meta-analysis of 102 studies and almost 4,000 participants found no robust evidence that attention, executive function, creativity, or spatial or verbal ability change across the cycle. How you feel can change. What you are capable of does not appear to.',
@@ -384,7 +522,31 @@
       sources: ['jang2025']
     },
     {
+      id: 'exercise',
+      icon: 'exercise',
+      stat: {
+        figure: t('78 studies', '78 estudios'),
+        caption: t('on performance across the cycle', 'sobre el rendimiento a lo largo del ciclo'),
+        visual: { kind: 'squares', count: 78, unit: 'study' }
+      },
+      title: t('Exercise: train by how you feel', 'Ejercicio: entrena según cómo te sientas'),
+      text: t(
+        'A meta-analysis of 78 studies found that performance may dip very slightly in the first days of the period. The evidence was low quality, and the authors concluded that no general rules can be set. A 2023 review of reviews found no clear effect of cycle phase on strength or on gains from training.',
+        'Un metaanálisis de 78 estudios encontró que el rendimiento puede bajar muy levemente en los primeros días del periodo. La evidencia era de baja calidad y los autores concluyeron que no se pueden fijar reglas generales. Una revisión de revisiones de 2023 no halló un efecto claro de la fase del ciclo sobre la fuerza ni sobre los progresos del entrenamiento.'
+      ),
+      sources: ['mcnulty2020', 'colenso2023']
+    },
+    {
+      id: 'appetite',
       icon: 'nutrition',
+      stat: {
+        figure: t('≈170 kcal', '≈170 kcal'),
+        caption: t(
+          'more a day in the second half, on average',
+          'más al día en la segunda mitad, en promedio'
+        ),
+        visual: { kind: 'plate' }
+      },
       title: t(
         'Appetite: a little higher before your period',
         'Apetito: un poco mayor antes del periodo'
@@ -971,6 +1133,281 @@
   };
 
   /* ------------------------------------------------------------------ */
+  /* "Inside your body" diagram                                          */
+  /* ------------------------------------------------------------------ */
+
+  var anatomy = {
+    caption: {
+      text: t(
+        'Simplified diagram, not to scale. It shows a typical pattern, not your own body.',
+        'Diagrama simplificado, no está a escala. Muestra un patrón típico, no tu propio cuerpo.'
+      ),
+      sources: ['statpearls', 'nhsFertility']
+    },
+    phases: {
+      menstrual: {
+        ovary: t('Hormones are at their lowest.', 'Las hormonas están en su punto más bajo.'),
+        womb: t(
+          'The lining comes away: this is your period.',
+          'El revestimiento se desprende: es tu periodo.'
+        )
+      },
+      follicular: {
+        ovary: t(
+          'An egg matures in a follicle, and oestrogen rises.',
+          'Un óvulo madura dentro de un folículo y el estrógeno sube.'
+        ),
+        womb: t('The lining builds up again.', 'El revestimiento vuelve a engrosarse.')
+      },
+      ovulatory: {
+        ovary: t('The follicle releases the egg.', 'El folículo libera el óvulo.'),
+        womb: t('The lining is thick.', 'El revestimiento está grueso.')
+      },
+      luteal: {
+        ovary: t(
+          'The empty follicle makes progesterone. It shrinks if there is no pregnancy.',
+          'El folículo vacío produce progesterona. Se reduce si no hay embarazo.'
+        ),
+        womb: t(
+          'The lining is at its thickest. If there is no pregnancy, it comes away as the next period.',
+          'El revestimiento está en su punto más grueso. Si no hay embarazo, se desprende con el siguiente periodo.'
+        )
+      }
+    }
+  };
+
+  /* ------------------------------------------------------------------ */
+  /* "Myth or fact?" game                                                */
+  /* ------------------------------------------------------------------ */
+
+  /**
+   * Claims use only findings already backed by the sources below. `evidence` rates
+   * the research behind the answer, not the claim, so it does not give the answer away.
+   */
+  var quiz = {
+    cards: [
+      {
+        id: 'lift-follicular',
+        answer: 'myth',
+        claim: t(
+          'You should only lift heavy weights in your follicular phase.',
+          'Solo deberías levantar pesado en tu fase folicular.'
+        ),
+        explanation: t(
+          'A 2023 review of reviews found no clear effect of cycle phase on strength or on gains from training. A consistent programme matters more than timing.',
+          'Una revisión de revisiones de 2023 no halló un efecto claro de la fase del ciclo sobre la fuerza ni sobre los progresos del entrenamiento. Importa más la constancia del programa que el momento.'
+        ),
+        evidence: 'moderate',
+        sources: ['colenso2023']
+      },
+      {
+        id: 'thinking-drops',
+        answer: 'myth',
+        claim: t(
+          'Your ability to think and concentrate drops before your period.',
+          'Tu capacidad de pensar y concentrarte baja antes del periodo.'
+        ),
+        explanation: t(
+          'A 2025 meta-analysis of 102 studies and almost 4,000 participants found no robust change in attention, executive function, creativity, or spatial or verbal ability across the cycle. How you feel can change; what you are capable of does not appear to.',
+          'Un metaanálisis de 2025 con 102 estudios y casi 4000 participantes no encontró cambios sólidos en la atención, las funciones ejecutivas, la creatividad ni la capacidad espacial o verbal a lo largo del ciclo. Puede cambiar cómo te sientes; lo que eres capaz de hacer, al parecer, no.'
+        ),
+        evidence: 'moderate',
+        sources: ['jang2025']
+      },
+      {
+        id: 'ovulation-presentations',
+        answer: 'myth',
+        claim: t(
+          'Ovulation is the best time to give presentations and negotiate.',
+          'La ovulación es el mejor momento para hacer presentaciones y negociar.'
+        ),
+        explanation: t(
+          'There is little direct research on this. A large meta-analysis found no robust change in verbal ability or other thinking skills across the cycle, so there is no sign of a mid-cycle peak.',
+          'Hay poca investigación directa sobre esto. Un metaanálisis amplio no encontró cambios sólidos en la capacidad verbal ni en otras habilidades mentales a lo largo del ciclo, así que no hay señales de un pico a mitad del ciclo.'
+        ),
+        evidence: 'limited',
+        sources: ['jang2025']
+      },
+      {
+        id: 'calendar-contraception',
+        answer: 'myth',
+        claim: t(
+          'A period calculator like the one on this page can tell you which days you cannot get pregnant.',
+          'Una calculadora de periodos como la de esta página puede decirte en qué días no puedes quedar embarazada.'
+        ),
+        explanation: t(
+          'Ovulation can move by several days from one cycle to the next, so a date-based estimate is not reliable enough to prevent or plan a pregnancy. Pregnancy is possible in the days around ovulation.',
+          'La ovulación puede moverse varios días de un ciclo a otro, así que una estimación por fechas no es lo bastante confiable para evitar ni para planificar un embarazo. El embarazo es posible en los días cercanos a la ovulación.'
+        ),
+        evidence: 'strong',
+        sources: ['nhsFertility', 'bull2019']
+      },
+      {
+        id: 'always-28',
+        answer: 'myth',
+        claim: t('A normal cycle always lasts 28 days.', 'Un ciclo normal siempre dura 28 días.'),
+        explanation: t(
+          'About 28 days is the average, but anything from 21 to 35 days is normal. The first half of the cycle is the part that varies most.',
+          'Unos 28 días es el promedio, pero cualquier duración entre 21 y 35 días es normal. La primera mitad del ciclo es la que más varía.'
+        ),
+        evidence: 'strong',
+        sources: ['nhsFertility', 'statpearls', 'bull2019']
+      },
+      {
+        id: 'same-mood-pattern',
+        answer: 'myth',
+        claim: t(
+          'Everyone goes through the same mood pattern across the cycle.',
+          'Todas las personas tienen el mismo patrón de ánimo a lo largo del ciclo.'
+        ),
+        explanation: t(
+          'Mood does vary across the cycle on average, but a review of 47 studies using daily mood diaries found no clear evidence of one premenstrual mood pattern in women in general. Your own record is the best guide.',
+          'En promedio, el ánimo sí varía a lo largo del ciclo, pero una revisión de 47 estudios con diarios de ánimo no encontró evidencia clara de un único patrón premenstrual en las mujeres en general. Tu propio registro es la mejor guía.'
+        ),
+        evidence: 'moderate',
+        sources: ['pierson2021', 'romans2012']
+      },
+      {
+        id: 'appetite-willpower',
+        answer: 'myth',
+        claim: t(
+          'Feeling hungrier before your period just means a lack of willpower.',
+          'Tener más hambre antes del periodo es solo falta de fuerza de voluntad.'
+        ),
+        explanation: t(
+          'Feeling hungrier is physiological. Pooled studies find people eat about 170 kcal more a day in the second half of the cycle, and resting metabolism may be slightly higher. Plan regular, filling meals.',
+          'Tener más hambre es fisiológico. Los estudios combinados encuentran que en la segunda mitad del ciclo se comen unas 170 kcal más al día, y el metabolismo en reposo podría ser algo mayor. Planifica comidas regulares y saciantes.'
+        ),
+        evidence: 'moderate',
+        sources: ['tucker2025', 'benton2020']
+      },
+      {
+        id: 'pain-normal',
+        answer: 'myth',
+        claim: t(
+          'Period pain that stops you doing your usual activities is just something to put up with.',
+          'El dolor menstrual que te impide hacer tus actividades habituales es algo que simplemente hay que aguantar.'
+        ),
+        explanation: t(
+          'Painful periods are common, but that does not mean you have to put up with them. Pain that is severe or stops your usual activities is a reason to see a health professional.',
+          'Los periodos dolorosos son frecuentes, pero eso no significa que tengas que aguantarlos. El dolor intenso o que te impide hacer tus actividades habituales es motivo para consultar a un profesional de la salud.'
+        ),
+        evidence: 'strong',
+        sources: ['nhsPain']
+      },
+      {
+        id: 'exercise-cramps',
+        answer: 'fact',
+        claim: t('Regular exercise can ease period pain.', 'El ejercicio regular puede aliviar el dolor menstrual.'),
+        explanation: t(
+          'A Cochrane review found that regular exercise may reduce period pain substantially, although the trials were small and low quality. Walking, swimming, cycling and yoga are all worth trying.',
+          'Una revisión Cochrane encontró que el ejercicio regular puede reducir bastante el dolor menstrual, aunque los ensayos eran pequeños y de baja calidad. Vale la pena probar caminar, nadar, andar en bicicleta o hacer yoga.'
+        ),
+        evidence: 'moderate',
+        sources: ['armour2019', 'nhsPain']
+      },
+      {
+        id: 'heavy-iron',
+        answer: 'fact',
+        claim: t(
+          'Heavy periods are a common cause of low iron.',
+          'Los periodos abundantes son una causa frecuente de falta de hierro.'
+        ),
+        explanation: t(
+          'Heavy periods are a very common cause of iron deficiency. If you are often very tired and your periods are heavy, ask for a blood test before you start taking iron supplements.',
+          'Los periodos abundantes son una causa muy frecuente de falta de hierro. Si a menudo estás muy cansada y tus periodos son abundantes, pide un análisis de sangre antes de empezar a tomar suplementos de hierro.'
+        ),
+        evidence: 'strong',
+        sources: ['nhsIron', 'munro2023']
+      },
+      {
+        id: 'pms-common',
+        answer: 'fact',
+        claim: t(
+          'Mood swings, irritability or low mood in the week before a period are common.',
+          'Los cambios de humor, la irritabilidad o el ánimo bajo en la semana previa al periodo son frecuentes.'
+        ),
+        explanation: t(
+          'For many people the last week of the cycle brings premenstrual symptoms: mood swings, feeling low, anxious or irritable, tiredness, bloating, headaches and poorer sleep. They usually ease once bleeding starts.',
+          'Para muchas personas, la última semana del ciclo trae síntomas premenstruales: cambios de humor, sentirse decaída, ansiosa o irritable, cansancio, hinchazón, dolor de cabeza y peor sueño. Suelen aliviarse cuando empieza el sangrado.'
+        ),
+        evidence: 'strong',
+        sources: ['nhsPeriods', 'nhsPmdd']
+      },
+      {
+        id: 'pmdd-treatable',
+        answer: 'fact',
+        claim: t(
+          'Very severe premenstrual mood symptoms can be a treatable medical condition.',
+          'Los síntomas emocionales premenstruales muy intensos pueden ser una condición médica con tratamiento.'
+        ),
+        explanation: t(
+          'Premenstrual dysphoric disorder (PMDD) affects roughly 2 to 3 people in every 100. Treatments include certain antidepressants (SSRIs), some hormonal contraceptives and cognitive behavioural therapy.',
+          'El trastorno disfórico premenstrual (TDPM) afecta aproximadamente a 2 o 3 de cada 100 personas. Entre los tratamientos están ciertos antidepresivos (ISRS), algunos anticonceptivos hormonales y la terapia cognitivo-conductual.'
+        ),
+        evidence: 'strong',
+        sources: ['nhsPmdd', 'reilly2024', 'acog2023']
+      },
+      {
+        id: 'exercise-pms',
+        answer: 'fact',
+        claim: t(
+          'Regular exercise is one of the first things recommended for premenstrual symptoms.',
+          'El ejercicio regular es una de las primeras recomendaciones para los síntomas premenstruales.'
+        ),
+        explanation: t(
+          'Health services list regular exercise, a balanced diet, enough sleep and not drinking too much alcohol among the first steps for premenstrual symptoms. Yoga or meditation can help with stress.',
+          'Los servicios de salud mencionan el ejercicio regular, una alimentación equilibrada, dormir lo suficiente y no beber demasiado alcohol entre los primeros pasos para los síntomas premenstruales. El yoga o la meditación pueden ayudar con el estrés.'
+        ),
+        evidence: 'moderate',
+        sources: ['nhsPms']
+      },
+      {
+        id: 'symptom-diary',
+        answer: 'fact',
+        claim: t(
+          'Tracking your own symptoms for two cycles tells you more than any general chart.',
+          'Registrar tus propios síntomas durante dos ciclos te dice más que cualquier gráfico general.'
+        ),
+        explanation: t(
+          'Averages hide large differences between people. A symptom diary kept for at least two cycles shows your real pattern, and it is the first thing a health professional will ask for.',
+          'Los promedios esconden grandes diferencias entre personas. Un diario de síntomas de al menos dos ciclos muestra tu patrón real, y es lo primero que te pedirá un profesional de la salud.'
+        ),
+        evidence: 'strong',
+        sources: ['nhsPms', 'nhsPmdd']
+      },
+      {
+        id: 'sleep-premenstrual',
+        answer: 'fact',
+        claim: t(
+          'Sleep often gets worse in the days before a period for people with premenstrual symptoms.',
+          'En quienes tienen síntomas premenstruales, el sueño suele empeorar en los días previos al periodo.'
+        ),
+        explanation: t(
+          'Poorer sleep before and during a period is common in people with premenstrual symptoms or painful cramps. A regular bedtime and winding down earlier can help.',
+          'Dormir peor antes y durante el periodo es frecuente en quienes tienen síntomas premenstruales o cólicos dolorosos. Mantener un horario regular y empezar a relajarte más temprano puede ayudar.'
+        ),
+        evidence: 'moderate',
+        sources: ['baker2018', 'nhsPms']
+      },
+      {
+        id: 'bleeding-7-days',
+        answer: 'fact',
+        claim: t(
+          'Bleeding for more than 7 days is worth mentioning to a health professional.',
+          'Un sangrado de más de 7 días es algo que conviene comentar con un profesional de la salud.'
+        ),
+        explanation: t(
+          'Health services list bleeding for more than 7 days, needing to change a pad or tampon every 1 to 2 hours, and passing clots larger than about 2.5 cm as reasons to book an appointment.',
+          'Los servicios de salud mencionan como motivos para pedir una consulta sangrar durante más de 7 días, necesitar cambiar la toalla sanitaria o el tampón cada 1 o 2 horas y expulsar coágulos de más de unos 2,5 cm.'
+        ),
+        evidence: 'strong',
+        sources: ['nhsHeavy']
+      }
+    ]
+  };
+
+  /* ------------------------------------------------------------------ */
   /* Sources                                                             */
   /* ------------------------------------------------------------------ */
 
@@ -1150,6 +1587,8 @@
     basics: basics,
     fit: fit,
     help: help,
+    anatomy: anatomy,
+    quiz: quiz,
     sources: sources
   };
 });

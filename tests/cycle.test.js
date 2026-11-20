@@ -213,3 +213,60 @@ test('describeHormone turns the curves into words', () => {
   assert.equal(Cycle.describeHormone('progesterone', 21, 28), 'high');
   assert.equal(Cycle.describeHormone('progesterone', 25, 28), 'falling');
 });
+
+test('anatomy: the lining is thinnest as bleeding ends and thickest after ovulation', () => {
+  const lining = (day) => Cycle.anatomyForDay(day, 28, 5).lining;
+  const all = Array.from({ length: 28 }, (_, i) => lining(i + 1));
+  assert.equal(Math.min(...all), lining(5), 'thinnest on the last bleeding day');
+  assert.ok(lining(1) > lining(5), 'shed through the bleeding days');
+  assert.ok(lining(10) > lining(6) && lining(14) > lining(10), 'builds up after the period');
+  assert.equal(Math.max(...all), lining(21), 'thickest in the second half');
+  assert.ok(lining(28) >= lining(16), 'stays thick until the next period');
+});
+
+test('anatomy: the follicle grows until ovulation, then the egg is released', () => {
+  const at = (day) => Cycle.anatomyForDay(day, 28, 5);
+  for (let day = 2; day <= 14; day += 1) {
+    assert.ok(at(day).follicle > at(day - 1).follicle, `follicle grows on day ${day}`);
+  }
+  assert.equal(at(14).follicle, 1);
+  assert.equal(at(15).follicle, 0, 'gone once the egg has been released');
+  assert.deepEqual([13, 14, 15, 16].map((day) => at(day).egg), [0, 0.5, 1, 0]);
+});
+
+test('anatomy: the empty follicle appears after ovulation and shrinks before the period', () => {
+  const body = (day) => Cycle.anatomyForDay(day, 28, 5).corpusLuteum;
+  for (let day = 1; day <= 14; day += 1) {
+    assert.equal(body(day), 0, `none before ovulation (day ${day})`);
+  }
+  assert.ok(body(15) > 0);
+  assert.ok(body(21) > 0.99, 'largest in the middle of the luteal phase');
+  assert.ok(body(28) < body(21) / 3, 'much smaller before the next period');
+});
+
+test('anatomy: shedding follows the bleeding days shown on the wheel', () => {
+  const shedding = (day, length, period) => Cycle.anatomyForDay(day, length, period).shedding;
+  assert.deepEqual(
+    Array.from({ length: 7 }, (_, i) => shedding(i + 1, 28, 5)),
+    [true, true, true, true, true, false, false]
+  );
+  // In a 21-day cycle, 8 days of bleeding are cut short at the ovulatory window (day 6).
+  assert.equal(shedding(5, 21, 8), true);
+  assert.equal(shedding(6, 21, 8), false);
+});
+
+test('anatomy: values stay in 0..1 for every accepted input and invalid days are refused', () => {
+  const { minCycle, maxCycle, minPeriod, maxPeriod } = Cycle.LIMITS;
+  for (let length = minCycle; length <= maxCycle; length += 1) {
+    for (let period = minPeriod; period <= maxPeriod; period += 1) {
+      for (let day = 1; day <= length; day += 1) {
+        const state = Cycle.anatomyForDay(day, length, period);
+        for (const key of ['follicle', 'egg', 'corpusLuteum', 'lining']) {
+          assert.ok(state[key] >= 0 && state[key] <= 1, `${key} in range (${length}/${period}/${day})`);
+        }
+      }
+    }
+  }
+  assert.throws(() => Cycle.anatomyForDay(0, 28, 5), RangeError);
+  assert.throws(() => Cycle.anatomyForDay(29, 28, 5), RangeError);
+});
