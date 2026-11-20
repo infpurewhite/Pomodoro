@@ -61,7 +61,7 @@ Scripts load in that order as classic scripts, so the page still opens straight 
 
 `assets/js/cycle.js` places ovulation 14 days before the next expected period, shows one day either side as the ovulatory window, and flags the last 7 days as the premenstrual week. For a 28-day cycle with 5 days of bleeding this gives days 1–5 menstrual, 6–12 follicular, 13–15 around ovulation and 16–28 luteal.
 
-This is a calendar estimate. Ovulation timing varies between people and between cycles, so the page says the result is not a measurement and must not be used to prevent or plan a pregnancy.
+This is a calendar estimate. Ovulation timing varies between women and between cycles, so the page says the result is not a measurement and must not be used to prevent or plan a pregnancy.
 
 ## Evidence policy
 
@@ -88,7 +88,7 @@ The evidence was reviewed to prefer the most recent studies carried out in women
 - Guidance comes mostly from the UK National Health Service. Thresholds for seeking care can differ in other health systems.
 - The hormone chart is a schematic. Its curves are illustrative shapes, not data. The "Inside your body" diagram is too: follicle, egg, empty follicle and lining sizes follow the same model, and the empty follicle tracks the schematic progesterone curve. Its labels (follicle, lining building up and thickest after ovulation) rest on StatPearls and NHS physiology.
 - The PMDD figure (about 2 to 3 in 100) comes from Reilly et al. (2024): 1.6% in community samples and 3.2% across all studies that confirmed the diagnosis with two cycles of daily symptom ratings. Studies without that check give about 7.7%.
-- The four-phase view is a simplification of a two-phase cycle, and it does not describe people using hormonal contraception or those with irregular cycles.
+- The four-phase view is a simplification of a two-phase cycle, and it does not describe women using hormonal contraception or those with irregular cycles.
 - The content has not been reviewed by a clinician.
 
 ## Privacy

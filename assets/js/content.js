@@ -213,7 +213,7 @@
     ),
 
     'stat.unit.country': t('Each dot is one country', 'Cada punto es un país'),
-    'stat.unit.person': t('Each dot is one person in 100', 'Cada punto es una persona de cada 100'),
+    'stat.unit.woman': t('Each dot is one woman in 100', 'Cada punto es una mujer de cada 100'),
     'stat.unit.study': t('Each square is one study', 'Cada cuadrado es un estudio'),
     'stat.average': t('average', 'promedio'),
 
@@ -338,10 +338,7 @@
       'This page offers general information and is not medical advice. It does not replace a consultation with a health professional.',
       'Esta página ofrece información general y no es un consejo médico. No reemplaza la consulta con un profesional de la salud.'
     ),
-    'footer.inclusive': t(
-      'Written for women and for anyone who menstruates.',
-      'Escrita para mujeres y para cualquier persona que menstrúa.'
-    ),
+    'footer.audience': t('Written for women.', 'Escrita para mujeres.'),
     'footer.privacy': t(
       'This page makes no external requests and sets no cookies.',
       'Esta página no hace solicitudes externas ni usa cookies.'
@@ -420,8 +417,8 @@
       },
       {
         text: t(
-          'Biologically there are two phases, follicular and luteal, divided by ovulation. This guide uses the popular four-part view because it is easier to follow. The first half is the part that varies most in length. The second half is steadier at around two weeks, although it also differs between people.',
-          'Biológicamente hay dos fases, la folicular y la lútea, separadas por la ovulación. Esta guía usa la división popular en cuatro partes porque es más fácil de seguir. La primera mitad es la que más varía en duración. La segunda es más estable, de unas dos semanas, aunque también cambia entre personas.'
+          'Biologically there are two phases, follicular and luteal, divided by ovulation. This guide uses the popular four-part view because it is easier to follow. The first half is the part that varies most in length. The second half is steadier at around two weeks, although it also differs between women.',
+          'Biológicamente hay dos fases, la folicular y la lútea, separadas por la ovulación. Esta guía usa la división popular en cuatro partes porque es más fácil de seguir. La primera mitad es la que más varía en duración. La segunda es más estable, de unas dos semanas, aunque también cambia entre mujeres.'
         ),
         sources: ['statpearls', 'bull2019']
       }
@@ -465,8 +462,8 @@
       icon: 'track',
       title: t('Cycle length: a wide normal range', 'Duración del ciclo: un rango normal amplio'),
       text: t(
-        'The average cycle is about 28 days, and anything from 21 to 35 days is normal. The first half is the part that varies most, between people and from month to month.',
-        'El ciclo promedio dura unos 28 días, y cualquier duración entre 21 y 35 días es normal. La primera mitad es la que más varía, entre personas y de un mes a otro.'
+        'The average cycle is about 28 days, and anything from 21 to 35 days is normal. The first half is the part that varies most, between women and from month to month.',
+        'El ciclo promedio dura unos 28 días, y cualquier duración entre 21 y 35 días es normal. La primera mitad es la que más varía, entre mujeres y de un mes a otro.'
       ),
       sources: ['nhsFertility', 'statpearls', 'bull2019'],
       stat: {
@@ -498,14 +495,14 @@
         'Síntomas premenstruales intensos: reales y tratables'
       ),
       text: t(
-        'Roughly 2 to 3 people in every 100 have premenstrual mood symptoms severe enough to be diagnosed as premenstrual dysphoric disorder (PMDD). That range comes from studies that confirmed the diagnosis with two cycles of daily symptom ratings: 1.6% in community samples and 3.2% across all such studies. Treatments include certain antidepressants (SSRIs), some hormonal contraceptives and cognitive behavioural therapy.',
-        'Aproximadamente 2 o 3 de cada 100 personas tienen síntomas emocionales premenstruales tan intensos que se diagnostican como trastorno disfórico premenstrual (TDPM). Ese rango proviene de estudios que confirmaron el diagnóstico con dos ciclos de registros diarios de síntomas: 1,6 % en muestras de la población general y 3,2 % en el conjunto de esos estudios. Entre los tratamientos están ciertos antidepresivos (ISRS), algunos anticonceptivos hormonales y la terapia cognitivo-conductual.'
+        'Roughly 2 to 3 women in every 100 have premenstrual mood symptoms severe enough to be diagnosed as premenstrual dysphoric disorder (PMDD). That range comes from studies that confirmed the diagnosis with two cycles of daily symptom ratings: 1.6% in community samples and 3.2% across all such studies. Treatments include certain antidepressants (SSRIs), some hormonal contraceptives and cognitive behavioural therapy.',
+        'Aproximadamente 2 o 3 de cada 100 mujeres tienen síntomas emocionales premenstruales tan intensos que se diagnostican como trastorno disfórico premenstrual (TDPM). Ese rango proviene de estudios que confirmaron el diagnóstico con dos ciclos de registros diarios de síntomas: 1,6 % en muestras de la población general y 3,2 % en el conjunto de esos estudios. Entre los tratamientos están ciertos antidepresivos (ISRS), algunos anticonceptivos hormonales y la terapia cognitivo-conductual.'
       ),
       sources: ['reilly2024', 'nhsPmdd', 'acog2023'],
       stat: {
         figure: t('2–3 in 100', '2–3 de cada 100'),
-        caption: t('people have PMDD', 'personas tienen TDPM'),
-        visual: { kind: 'dots', count: 100, filled: 2, partial: 1, unit: 'person' }
+        caption: t('women have PMDD', 'mujeres tienen TDPM'),
+        visual: { kind: 'dots', count: 100, filled: 2, partial: 1, unit: 'woman' }
       }
     },
     {
@@ -554,8 +551,8 @@
         'Apetito: un poco mayor antes del periodo'
       ),
       text: t(
-        'Pooled studies show people eat more in the second half of the cycle, by roughly 170 kcal a day on average. Resting metabolism may be slightly higher too: recent studies put the rise at about 30 to 120 kcal a day, small enough that it may fall within normal day-to-day variation. The studies are small and their methods are inconsistent.',
-        'Los estudios combinados muestran que se come más en la segunda mitad del ciclo, unas 170 kcal diarias más en promedio. El metabolismo en reposo también podría ser algo mayor: estudios recientes estiman el aumento en unas 30 a 120 kcal al día, tan poco que podría quedar dentro de la variación normal de un día a otro. Son estudios pequeños y con métodos poco uniformes.'
+        'Pooled studies show women eat more in the second half of the cycle, by roughly 170 kcal a day on average. Resting metabolism may be slightly higher too: recent studies put the rise at about 30 to 120 kcal a day, small enough that it may fall within normal day-to-day variation. The studies are small and their methods are inconsistent.',
+        'Los estudios combinados muestran que las mujeres comen más en la segunda mitad del ciclo, unas 170 kcal diarias más en promedio. El metabolismo en reposo también podría ser algo mayor: estudios recientes estiman el aumento en unas 30 a 120 kcal al día, tan poco que podría quedar dentro de la variación normal de un día a otro. Son estudios pequeños y con métodos poco uniformes.'
       ),
       sources: ['tucker2025', 'benton2020', 'hurtova2026']
     }
@@ -583,8 +580,8 @@
       },
       feel: {
         text: t(
-          'Cramps are common in the first days, and you may feel more tired. Heat (a heat pad, a hot water bottle or a warm bath) and gentle movement help many people. If you had premenstrual symptoms, they usually ease within a few days of bleeding starting.',
-          'Los cólicos son frecuentes en los primeros días y puede que te sientas más cansada. El calor (una almohadilla térmica, una bolsa de agua caliente o un baño tibio) y el movimiento suave ayudan a muchas personas. Si tuviste síntomas premenstruales, suelen aliviarse a los pocos días de empezar el sangrado.'
+          'Cramps are common in the first days, and you may feel more tired. Heat (a heat pad, a hot water bottle or a warm bath) and gentle movement help many women. If you had premenstrual symptoms, they usually ease within a few days of bleeding starting.',
+          'Los cólicos son frecuentes en los primeros días y puede que te sientas más cansada. El calor (una almohadilla térmica, una bolsa de agua caliente o un baño tibio) y el movimiento suave ayudan a muchas mujeres. Si tuviste síntomas premenstruales, suelen aliviarse a los pocos días de empezar el sangrado.'
         ),
         evidence: 'strong',
         sources: ['nhsPain', 'nhsPeriods']
@@ -618,8 +615,8 @@
       exercise: [
         {
           text: t(
-            'Movement can ease cramps: try walking, swimming, cycling, yoga or relaxation exercises. A 2024 analysis of 29 randomised trials with 1,808 participants found that every type of exercise tested reduced period pain after 8 weeks, by about 3 to 4 points on a 10-point scale. Most trials had some risk of bias, and nearly all enrolled people aged 15 to 26.',
-            'Moverte puede aliviar los cólicos: prueba caminar, nadar, andar en bicicleta, hacer yoga o ejercicios de relajación. Un análisis de 2024 con 29 ensayos aleatorizados y 1808 participantes encontró que todos los tipos de ejercicio estudiados redujeron el dolor menstrual tras 8 semanas, en unos 3 a 4 puntos en una escala de 10. La mayoría de los ensayos tenía algún riesgo de sesgo, y casi todos incluían a personas de 15 a 26 años.'
+            'Movement can ease cramps: try walking, swimming, cycling, yoga or relaxation exercises. A 2024 analysis of 29 randomised trials with 1,808 participants found that every type of exercise tested reduced period pain after 8 weeks, by about 3 to 4 points on a 10-point scale. Most trials had some risk of bias, and nearly all enrolled young women aged 15 to 26.',
+            'Moverte puede aliviar los cólicos: prueba caminar, nadar, andar en bicicleta, hacer yoga o ejercicios de relajación. Un análisis de 2024 con 29 ensayos aleatorizados y 1808 participantes encontró que todos los tipos de ejercicio estudiados redujeron el dolor menstrual tras 8 semanas, en unos 3 a 4 puntos en una escala de 10. La mayoría de los ensayos tenía algún riesgo de sesgo, y casi todos incluían a mujeres jóvenes de 15 a 26 años.'
           ),
           evidence: 'moderate',
           sources: ['tsai2024', 'nhsPain']
@@ -680,15 +677,15 @@
       ),
       happening: {
         text: t(
-          'Once bleeding stops, oestrogen keeps rising as an egg matures in the ovary. Strictly, the follicular phase starts on day 1 and includes your period; here it means the days between bleeding and ovulation. This is the part of the cycle that varies most in length, which is why cycles differ from person to person and from month to month.',
-          'Cuando termina el sangrado, el estrógeno sigue subiendo mientras un óvulo madura en el ovario. En rigor, la fase folicular empieza el día 1 e incluye el periodo; aquí nos referimos a los días entre el sangrado y la ovulación. Es la parte del ciclo que más varía en duración, y por eso los ciclos difieren entre personas y de un mes a otro.'
+          'Once bleeding stops, oestrogen keeps rising as an egg matures in the ovary. Strictly, the follicular phase starts on day 1 and includes your period; here it means the days between bleeding and ovulation. This is the part of the cycle that varies most in length, which is why cycles differ from woman to woman and from month to month.',
+          'Cuando termina el sangrado, el estrógeno sigue subiendo mientras un óvulo madura en el ovario. En rigor, la fase folicular empieza el día 1 e incluye el periodo; aquí nos referimos a los días entre el sangrado y la ovulación. Es la parte del ciclo que más varía en duración, y por eso los ciclos difieren entre mujeres y de un mes a otro.'
         ),
         sources: ['nhsFertility', 'statpearls', 'bull2019']
       },
       feel: {
         text: t(
-          'Many people describe a steadier mood and more energy in these days, often because premenstrual and period symptoms have passed. Research has not shown a dependable high in this phase, so treat it as a common experience, not a guarantee.',
-          'Muchas personas describen un ánimo más estable y más energía en estos días, a menudo porque ya pasaron los síntomas premenstruales y del periodo. La investigación no ha demostrado un «pico» confiable en esta fase, así que tómalo como una experiencia común, no como una garantía.'
+          'Many women describe a steadier mood and more energy in these days, often because premenstrual and period symptoms have passed. Research has not shown a dependable high in this phase, so treat it as a common experience, not a guarantee.',
+          'Muchas mujeres describen un ánimo más estable y más energía en estos días, a menudo porque ya pasaron los síntomas premenstruales y del periodo. La investigación no ha demostrado un «pico» confiable en esta fase, así que tómalo como una experiencia común, no como una garantía.'
         ),
         evidence: 'limited',
         sources: ['romans2012']
@@ -749,8 +746,8 @@
       ],
       today: {
         mood: t(
-          'Often a steadier stretch, though not for everyone.',
-          'Suele ser una etapa más estable, aunque no para todas las personas.'
+          'Often a steadier stretch, though not for every woman.',
+          'Suele ser una etapa más estable, aunque no para todas las mujeres.'
         ),
         nutrition: t(
           'No special diet needed. Eat balanced meals to your hunger.',
@@ -783,8 +780,8 @@
       },
       feel: {
         text: t(
-          'Some people notice a brief twinge on one or both sides of the lower tummy, or clearer, slippery discharge that looks like raw egg white. Many notice nothing. Claims of a peak in mood or confidence are common online but are not established.',
-          'Algunas personas notan una punzada breve en uno o ambos lados del bajo vientre, o un flujo más claro y resbaladizo, parecido a la clara de huevo cruda. Muchas no notan nada. En internet abundan las afirmaciones sobre un pico de ánimo o de confianza, pero no están demostradas.'
+          'Some women notice a brief twinge on one or both sides of the lower tummy, or clearer, slippery discharge that looks like raw egg white. Many notice nothing. Claims of a peak in mood or confidence are common online but are not established.',
+          'Algunas mujeres notan una punzada breve en uno o ambos lados del bajo vientre, o un flujo más claro y resbaladizo, parecido a la clara de huevo cruda. Muchas no notan nada. En internet abundan las afirmaciones sobre un pico de ánimo o de confianza, pero no están demostradas.'
         ),
         evidence: 'limited',
         sources: ['uhbFertility']
@@ -829,7 +826,7 @@
       today: {
         mood: t(
           'Some notice a mid-cycle twinge or clearer discharge. Many notice nothing.',
-          'Algunas personas notan una punzada a mitad de ciclo o un flujo más claro. Muchas no notan nada.'
+          'Algunas mujeres notan una punzada a mitad de ciclo o un flujo más claro. Muchas no notan nada.'
         ),
         nutrition: t(
           'Nothing specific is proven for these days. Keep to the basics.',
@@ -862,24 +859,24 @@
       },
       feel: {
         text: t(
-          'The first week is often uneventful. The last week is when premenstrual symptoms appear for many people: mood swings, feeling low, anxious or irritable, tiredness, bloating, headaches and poorer sleep. They usually ease once bleeding starts.',
-          'La primera semana suele transcurrir sin novedades. En la última semana aparecen, para muchas personas, los síntomas premenstruales: cambios de humor, sentirse decaída, ansiosa o irritable, cansancio, hinchazón, dolor de cabeza y peor sueño. Suelen aliviarse cuando empieza el sangrado.'
+          'The first week is often uneventful. The last week is when premenstrual symptoms appear for many women: mood swings, feeling low, anxious or irritable, tiredness, bloating, headaches and poorer sleep. They usually ease once bleeding starts.',
+          'La primera semana suele transcurrir sin novedades. En la última semana aparecen, para muchas mujeres, los síntomas premenstruales: cambios de humor, sentirse decaída, ansiosa o irritable, cansancio, hinchazón, dolor de cabeza y peor sueño. Suelen aliviarse cuando empieza el sangrado.'
         ),
         evidence: 'strong',
         sources: ['nhsPeriods', 'nhsPmdd', 'baker2018']
       },
       note: {
         text: t(
-          'If the mood symptoms are severe (intense anxiety, anger or depression, or thoughts of suicide), it may be premenstrual dysphoric disorder (PMDD). It affects roughly 2 to 3 people in every 100 and it is treatable.',
-          'Si los síntomas emocionales son intensos (ansiedad, enojo o depresión muy marcados, o pensamientos suicidas), puede tratarse del trastorno disfórico premenstrual (TDPM). Afecta aproximadamente a 2 o 3 de cada 100 personas y tiene tratamiento.'
+          'If the mood symptoms are severe (intense anxiety, anger or depression, or thoughts of suicide), it may be premenstrual dysphoric disorder (PMDD). It affects roughly 2 to 3 women in every 100 and it is treatable.',
+          'Si los síntomas emocionales son intensos (ansiedad, enojo o depresión muy marcados, o pensamientos suicidas), puede tratarse del trastorno disfórico premenstrual (TDPM). Afecta aproximadamente a 2 o 3 de cada 100 mujeres y tiene tratamiento.'
         ),
         sources: ['nhsPmdd', 'reilly2024']
       },
       nutrition: [
         {
           text: t(
-            'Feeling hungrier is physiological. Studies find people eat about 170 kcal more per day in this phase, and resting metabolism may be slightly higher. Plan regular, filling meals instead of fighting your appetite.',
-            'Tener más hambre es fisiológico. Los estudios encuentran que en esta fase se comen unas 170 kcal más al día, y el metabolismo en reposo podría ser algo mayor. Planifica comidas regulares y saciantes en lugar de luchar contra el apetito.'
+            'Feeling hungrier is physiological. Studies find women eat about 170 kcal more per day in this phase, and resting metabolism may be slightly higher. Plan regular, filling meals instead of fighting your appetite.',
+            'Tener más hambre es fisiológico. Los estudios encuentran que en esta fase las mujeres comen unas 170 kcal más al día, y el metabolismo en reposo podría ser algo mayor. Planifica comidas regulares y saciantes en lugar de luchar contra el apetito.'
           ),
           evidence: 'moderate',
           sources: ['tucker2025', 'benton2020', 'hurtova2026']
@@ -914,8 +911,8 @@
       productivity: [
         {
           text: t(
-            'Protect your sleep in the last week: keep a regular bedtime and wind down earlier. Poorer sleep before and during a period is common in people with premenstrual symptoms or painful cramps; a 2023 review of 35 studies linked both with shorter, less satisfying sleep and more daytime sleepiness.',
-            'Cuida tu sueño en la última semana: mantén un horario regular y empieza a relajarte más temprano. Dormir peor antes y durante el periodo es frecuente en quienes tienen síntomas premenstruales o cólicos dolorosos; una revisión de 2023 con 35 estudios relacionó ambos con un sueño más corto y menos satisfactorio, y con más somnolencia durante el día.'
+            'Protect your sleep in the last week: keep a regular bedtime and wind down earlier. Poorer sleep before and during a period is common in women with premenstrual symptoms or painful cramps; a 2023 review of 35 studies linked both with shorter, less satisfying sleep and more daytime sleepiness.',
+            'Cuida tu sueño en la última semana: mantén un horario regular y empieza a relajarte más temprano. Dormir peor antes y durante el periodo es frecuente en las mujeres que tienen síntomas premenstruales o cólicos dolorosos; una revisión de 2023 con 35 estudios relacionó ambos con un sueño más corto y menos satisfactorio, y con más somnolencia durante el día.'
           ),
           evidence: 'moderate',
           sources: ['jeon2023', 'baker2018', 'nhsPms']
@@ -1005,8 +1002,8 @@
       icon: 'sleep',
       title: t('Keep sleep regular', 'Mantén un sueño regular'),
       text: t(
-        'Getting enough sleep is part of standard advice for premenstrual symptoms, and poorer sleep is common in the days before a period for people who have them.',
-        'Dormir lo suficiente forma parte del consejo habitual para los síntomas premenstruales, y dormir peor en los días previos al periodo es frecuente en quienes los tienen.'
+        'Getting enough sleep is part of standard advice for premenstrual symptoms, and poorer sleep is common in the days before a period for women who have them.',
+        'Dormir lo suficiente forma parte del consejo habitual para los síntomas premenstruales, y dormir peor en los días previos al periodo es frecuente en las mujeres que los tienen.'
       ),
       evidence: 'moderate',
       sources: ['nhsPms', 'baker2018', 'jeon2023']
@@ -1015,8 +1012,8 @@
       icon: 'track',
       title: t('Track your own pattern', 'Registra tu propio patrón'),
       text: t(
-        'Note how you feel for at least two cycles. Averages hide large differences between people, so your own record is a better guide than any chart, including the ones on this page.',
-        'Anota cómo te sientes durante al menos dos ciclos. Los promedios esconden grandes diferencias entre personas, así que tu propio registro es mejor guía que cualquier gráfico, incluidos los de esta página.'
+        'Note how you feel for at least two cycles. Averages hide large differences between women, so your own record is a better guide than any chart, including the ones on this page.',
+        'Anota cómo te sientes durante al menos dos ciclos. Los promedios esconden grandes diferencias entre mujeres, así que tu propio registro es mejor guía que cualquier gráfico, incluidos los de esta página.'
       ),
       evidence: 'strong',
       sources: ['nhsPms', 'mcnulty2020']
@@ -1047,8 +1044,8 @@
     {
       title: t('Puberty and the approach of menopause', 'Pubertad y cercanía de la menopausia'),
       text: t(
-        'Irregular periods are common at both ends of the reproductive years, so phase estimates are less dependable then. In a 2023 study of 12,608 people, cycle length varied most in those under 20 and over 45.',
-        'Los periodos irregulares son frecuentes al principio y al final de los años reproductivos, así que en esas etapas las estimaciones por fase son menos confiables. En un estudio de 2023 con 12 608 personas, la duración del ciclo varió más en las menores de 20 años y en las mayores de 45.'
+        'Irregular periods are common at both ends of the reproductive years, so phase estimates are less dependable then. In a 2023 study of 12,608 women, cycle length varied most in those under 20 and over 45.',
+        'Los periodos irregulares son frecuentes al principio y al final de los años reproductivos, así que en esas etapas las estimaciones por fase son menos confiables. En un estudio de 2023 con 12 608 mujeres, la duración del ciclo varió más en las menores de 20 años y en las mayores de 45.'
       ),
       sources: ['nhsIrregular', 'li2023']
     },
@@ -1259,8 +1256,8 @@
         id: 'same-mood-pattern',
         answer: 'myth',
         claim: t(
-          'Everyone goes through the same mood pattern across the cycle.',
-          'Todas las personas tienen el mismo patrón de ánimo a lo largo del ciclo.'
+          'Every woman goes through the same mood pattern across the cycle.',
+          'Todas las mujeres tienen el mismo patrón de ánimo a lo largo del ciclo.'
         ),
         explanation: t(
           'Mood does vary across the cycle on average, but a review of 47 studies using daily mood diaries found no clear evidence of one premenstrual mood pattern in women in general. Your own record is the best guide.',
@@ -1277,8 +1274,8 @@
           'Tener más hambre antes del periodo es solo falta de fuerza de voluntad.'
         ),
         explanation: t(
-          'Feeling hungrier is physiological. Pooled studies find people eat about 170 kcal more a day in the second half of the cycle, and resting metabolism may be slightly higher. Plan regular, filling meals.',
-          'Tener más hambre es fisiológico. Los estudios combinados encuentran que en la segunda mitad del ciclo se comen unas 170 kcal más al día, y el metabolismo en reposo podría ser algo mayor. Planifica comidas regulares y saciantes.'
+          'Feeling hungrier is physiological. Pooled studies find women eat about 170 kcal more a day in the second half of the cycle, and resting metabolism may be slightly higher. Plan regular, filling meals.',
+          'Tener más hambre es fisiológico. Los estudios combinados encuentran que en la segunda mitad del ciclo las mujeres comen unas 170 kcal más al día, y el metabolismo en reposo podría ser algo mayor. Planifica comidas regulares y saciantes.'
         ),
         evidence: 'moderate',
         sources: ['tucker2025', 'benton2020', 'hurtova2026']
@@ -1330,8 +1327,8 @@
           'Los cambios de humor, la irritabilidad o el ánimo bajo en la semana previa al periodo son frecuentes.'
         ),
         explanation: t(
-          'For many people the last week of the cycle brings premenstrual symptoms: mood swings, feeling low, anxious or irritable, tiredness, bloating, headaches and poorer sleep. They usually ease once bleeding starts.',
-          'Para muchas personas, la última semana del ciclo trae síntomas premenstruales: cambios de humor, sentirse decaída, ansiosa o irritable, cansancio, hinchazón, dolor de cabeza y peor sueño. Suelen aliviarse cuando empieza el sangrado.'
+          'For many women the last week of the cycle brings premenstrual symptoms: mood swings, feeling low, anxious or irritable, tiredness, bloating, headaches and poorer sleep. They usually ease once bleeding starts.',
+          'Para muchas mujeres, la última semana del ciclo trae síntomas premenstruales: cambios de humor, sentirse decaída, ansiosa o irritable, cansancio, hinchazón, dolor de cabeza y peor sueño. Suelen aliviarse cuando empieza el sangrado.'
         ),
         evidence: 'strong',
         sources: ['nhsPeriods', 'nhsPmdd']
@@ -1344,8 +1341,8 @@
           'Los síntomas emocionales premenstruales muy intensos pueden ser una condición médica con tratamiento.'
         ),
         explanation: t(
-          'Premenstrual dysphoric disorder (PMDD) affects roughly 2 to 3 people in every 100. Treatments include certain antidepressants (SSRIs), some hormonal contraceptives and cognitive behavioural therapy.',
-          'El trastorno disfórico premenstrual (TDPM) afecta aproximadamente a 2 o 3 de cada 100 personas. Entre los tratamientos están ciertos antidepresivos (ISRS), algunos anticonceptivos hormonales y la terapia cognitivo-conductual.'
+          'Premenstrual dysphoric disorder (PMDD) affects roughly 2 to 3 women in every 100. Treatments include certain antidepressants (SSRIs), some hormonal contraceptives and cognitive behavioural therapy.',
+          'El trastorno disfórico premenstrual (TDPM) afecta aproximadamente a 2 o 3 de cada 100 mujeres. Entre los tratamientos están ciertos antidepresivos (ISRS), algunos anticonceptivos hormonales y la terapia cognitivo-conductual.'
         ),
         evidence: 'strong',
         sources: ['nhsPmdd', 'reilly2024', 'acog2023']
@@ -1372,8 +1369,8 @@
           'Registrar tus propios síntomas durante dos ciclos te dice más que cualquier gráfico general.'
         ),
         explanation: t(
-          'Averages hide large differences between people. A symptom diary kept for at least two cycles shows your real pattern, and it is the first thing a health professional will ask for.',
-          'Los promedios esconden grandes diferencias entre personas. Un diario de síntomas de al menos dos ciclos muestra tu patrón real, y es lo primero que te pedirá un profesional de la salud.'
+          'Averages hide large differences between women. A symptom diary kept for at least two cycles shows your real pattern, and it is the first thing a health professional will ask for.',
+          'Los promedios esconden grandes diferencias entre mujeres. Un diario de síntomas de al menos dos ciclos muestra tu patrón real, y es lo primero que te pedirá un profesional de la salud.'
         ),
         evidence: 'strong',
         sources: ['nhsPms', 'nhsPmdd']
@@ -1382,12 +1379,12 @@
         id: 'sleep-premenstrual',
         answer: 'fact',
         claim: t(
-          'Sleep often gets worse in the days before a period for people with premenstrual symptoms.',
-          'En quienes tienen síntomas premenstruales, el sueño suele empeorar en los días previos al periodo.'
+          'Sleep often gets worse in the days before a period for women with premenstrual symptoms.',
+          'En las mujeres con síntomas premenstruales, el sueño suele empeorar en los días previos al periodo.'
         ),
         explanation: t(
-          'Poorer sleep before and during a period is common in people with premenstrual symptoms or painful cramps. A regular bedtime and winding down earlier can help.',
-          'Dormir peor antes y durante el periodo es frecuente en quienes tienen síntomas premenstruales o cólicos dolorosos. Mantener un horario regular y empezar a relajarte más temprano puede ayudar.'
+          'Poorer sleep before and during a period is common in women with premenstrual symptoms or painful cramps. A regular bedtime and winding down earlier can help.',
+          'Dormir peor antes y durante el periodo es frecuente en las mujeres que tienen síntomas premenstruales o cólicos dolorosos. Mantener un horario regular y empezar a relajarte más temprano puede ayudar.'
         ),
         evidence: 'moderate',
         sources: ['jeon2023', 'baker2018', 'nhsPms']

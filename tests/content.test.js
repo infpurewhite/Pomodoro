@@ -175,7 +175,7 @@ test('every interface string referenced by the scripts exists', () => {
     'quiz.said.': Quiz.ANSWERS,
     'quiz.result.': ['high', 'mid', 'low'],
     'sources.sample.': ['women', 'adults'],
-    'stat.unit.': ['country', 'person', 'study']
+    'stat.unit.': ['country', 'woman', 'study']
   };
   for (const prefix of prefixes) {
     assert.ok(dynamic[prefix], `test knows the run-time keys built from "${prefix}"`);
